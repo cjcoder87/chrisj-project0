@@ -1,0 +1,43 @@
+html, body{
+  margin: 0;
+}
+header{
+  width: 100vw;
+  height: 150px;
+  background-color: #FFC83F;
+  margin-bottom: 45px;
+  position: relative;
+}
+ul, header h1{
+  list-style-type: none;
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+}
+
+header h1{
+  left: 10px;
+  color: #7F641F;
+}
+nav ul li{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a{
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+.flashcard{
+  border: solid black 1px;
+  width: 500px;
+  height: 300px;
+  background-image: url("index.png");
+  margin-left: 30%;
+
+}
+
+
+
