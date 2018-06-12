@@ -24,11 +24,11 @@ clear: both;
 /* width: 100vw; */
 }
 aside{
-  float: left;
+  float: right;
   width: 175px;
   height: 250px;
   border: solid 1px black;
-  margin-left: 10px;
+  margin-right: 10px;
   background-color: #55ADCC;
 
 }
@@ -111,6 +111,7 @@ button.btn.btn-md.btn-danger{
   width: 500px;
   height: 300px;
   background-image: url("index.png");
+  cursor: pointer;
 
 }
 
@@ -130,16 +131,7 @@ button.btn.btn-md.btn-danger{
   display: inline-block;
   color: white;
   margin-top: 30px;
-}
-
-.rightHolder{
-  
-
-}
-
-.leftHolder{
-  
-  
+  cursor: pointer;
 }
 
 /* Flipping CSS */
@@ -182,6 +174,20 @@ button.btn.btn-md.btn-danger{
   box-sizing: border-box;
   color: white;
   text-align: center;
+  cursor: pointer;
 }
 
 /*http://jsfiddle.net/YaUPs/*/
+
+
+@media only screen and (max-width: 960px) {
+  .f1_container{
+    margin: 40px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  aside{
+    display:none;
+  }
+}
