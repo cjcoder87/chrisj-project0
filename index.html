@@ -7,10 +7,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <script>
-  $('.flipper').click(function() {
-    $('.f1_container').toggleClass('active');
-});</script> -->
+<script>
+$(function() {
+$('.flipper').click(function() {
+  $('.f1_container').toggleClass('active');
+});
+// Picture Flip http://jsfiddle.net/YaUPs/
+
+}); // ready function Close tag
+
+</script>
   <title>Flash Card Fun</title>
 </head>
 <body>
@@ -26,21 +32,34 @@
 
   <main>
     <aside>
-      <button class="btn btn-md btn-primary">Add Flash Card</button>
-      <button class="btn btn-md btn-warning">Update Flash Card</button>
-      <button class="btn btn-md btn-danger">Delete Flash Card</button> 
+      <button type="button" class="btn btn-md btn-primary flipper">Add Flash Card</button>
+      <button type="button" class="btn btn-md btn-warning">Update Flash Card</button>
+      <button type="button" class="btn btn-md btn-danger">Delete Flash Card</button> 
     </aside>
-    <div class="flashCardHolder">
-   
+    <div class="flashCardHolder f1_container">
+        <div class="shadow f1_card">
+
+            <div class="front face">
     
-                <div class="flashcard flipper"></div>
+                <div class="flashcard"></div>
+
+                </div>
+
+                <div class="behind face center flashcard2">
 
 
-    <div class="leftHolder pull-left"><p>&lt;</p></div>
-    <div class="rightHolder pull-right"><p>&gt;</p></div>
+    
 
+  </div>
+ 
+</div>
+
+<div class="leftHolder pull-left"><p>&lt;</p></div>
+<div class="rightHolder pull-right"><p>&gt;</p></div>
      
      </div> <!-- End of Flash Card Holder -->
+
+     
   </main>
 
   <footer>
