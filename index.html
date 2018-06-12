@@ -6,17 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script>
+  $('.flipper').click(function() {
+    $('.f1_container').toggleClass('active');
+});</script> -->
   <title>Flash Card Fun</title>
 </head>
 <body>
 
-  <header class="">
+  <header class="pull-left">
     <h1>Flash Cards</h1>
-    <nav>
+    <nav class="pull-right">
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="howtoplay.html">How to Play</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
@@ -27,18 +30,17 @@
       <button class="btn btn-md btn-warning">Update Flash Card</button>
       <button class="btn btn-md btn-danger">Delete Flash Card</button> 
     </aside>
-    <div class="flashcard">
+    <div class="flashCardHolder">
+   
+    
+                <div class="flashcard flipper"></div>
 
-    </div>
 
-    <div class="leftHolder">
-      <p>&lt;</p>
-    </div>
+    <div class="leftHolder pull-left"><p>&lt;</p></div>
+    <div class="rightHolder pull-right"><p>&gt;</p></div>
 
-    <div class="rightHolder">
-        <p>&gt;</p>
-
-      </div>
+     
+     </div> <!-- End of Flash Card Holder -->
   </main>
 
   <footer>
