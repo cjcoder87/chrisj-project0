@@ -1,0 +1,211 @@
+
+html{
+  font-size: 16px;
+  
+}
+
+nav section.col-md-5 ul li{
+  list-style-type: none;
+margin: 15px 5px;
+font-size: 1.5rem;
+cursor: pointer;
+
+}
+nav section.col-md-5 ul{
+  width: 100;
+}
+nav section.col-md-5 ul li:hover{
+  background-color: darkgray;
+  color: white;
+}
+
+header{
+  height: 200;
+
+background: #6097CC; /* For browsers that do not support gradients */
+background: linear-gradient(to bottom right, #6097CC, #78BDFF);
+  color: white;
+ 
+
+}
+
+
+main{
+  background-image: url('web2.png'); 
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 75% 100%;
+  height: 500px;
+
+  
+}
+h2{
+  font-size: 3em;
+  padding-top: 20px;
+}
+#subject {
+  background:#26597F; /* For browsers that do not support gradients */
+    background: linear-gradient(#26597F, #3F647F); /*Standard syntax (must be last)*/
+    height: 100%;
+
+  color: whitesmoke; 
+
+}
+
+#subjects{
+  font-family: Roboto, Open-Sans, sans-serif;
+  font-size: 2rem;
+  list-style-type: none;
+   width: 100%;
+}
+#subjects li{
+  margin: 30px 0;
+  margin-left: -25px;
+  cursor: pointer;
+ 
+}
+
+#subjects li:hover{
+  background-color: #4D9DFF;
+}
+/* .f1_container.active .f1_card{
+  margin-top: 20px;
+} */
+
+.flashCardHolder{
+  width: 500px;
+  
+  margin: 0 auto;
+  /* border: solid 1px blue; */
+  
+}
+
+
+
+.flashcard, flashcard2{
+  border: solid black 1px;
+  width: 500px;
+  height: 300px;
+  background-image: url("index.png");
+  cursor: pointer;
+
+}
+
+.flashcard p, .flashcard2 p{
+  margin: 125px 135px 10px;
+  width: 250px;
+  font-size: 18px;
+  font-family: Roboto, Calibri, sans-serif;
+}
+
+.flashcard2{
+  background-image: url("index2.png");
+
+}
+
+.flashcard2 p{
+  /* position: relative; */
+
+}
+
+.rightHolder, .leftHolder{
+  width: 50px;
+  height: 50px;
+  background-color: #32767F;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  display: inline-block;
+  color: white;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+/* Flipping CSS */
+
+.f1_container {
+  position: relative;
+  margin-top: 20px;
+  width: 500px;
+  height: 300px;
+  z-index : 1;
+}
+.f1_container {
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+.f1_card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all 1.0s linear;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+.f1_container.active .f1_card {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.face {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.face.behind {
+  display: block;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  box-sizing: border-box;
+  /* color: white; */
+  text-align: center;
+  cursor: pointer;
+}
+
+
+footer{
+  height: 350px;
+  background-color: lightgray;
+ 
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+  footer.row{
+    margin-top: 450px;}
+    main{
+    
+      background-image: none;
+      }
+
+      nav section.col-md-5 ul li{
+        display: inline-block;
+      }
+
+      .jumbotron h1{
+        font-size: 3rem;
+      }
+  }
+
+  @media only screen and (max-width: 560px) {
+    footer.row{
+      margin-top: 400px;}
+      main{
+      
+        background-image: none;
+        }
+  
+        nav section.col-md-5 ul li{
+          display: block;
+          float: left;
+        }
+  
+        .jumbotron h1{
+          font-size: 2.5rem;
+        }
+    }
+  
+
