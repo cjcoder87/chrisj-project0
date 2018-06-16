@@ -10,9 +10,10 @@ margin: 15px 5px;
 font-size: 1.5rem;
 cursor: pointer;
 
+
 }
 nav section.col-md-5 ul{
-  width: 100;
+  width: 75%;
 }
 nav section.col-md-5 ul li:hover{
   background-color: darkgray;
@@ -20,8 +21,8 @@ nav section.col-md-5 ul li:hover{
 }
 
 header{
-  height: 200;
-
+  height: 250px;
+box-shadow: 2px 2px 7px gray;
 background: #6097CC; /* For browsers that do not support gradients */
 background: linear-gradient(to bottom right, #6097CC, #78BDFF);
   color: white;
@@ -31,7 +32,7 @@ background: linear-gradient(to bottom right, #6097CC, #78BDFF);
 
 
 main{
-  background-image: url('web2.png'); 
+  background-image: url('web3.png'); 
   background-repeat: no-repeat;
   background-position: center right;
   background-size: 75% 100%;
@@ -39,15 +40,28 @@ main{
 
   
 }
+.fa-plus{
+  color: green;
+}
+.fa-trash{
+  color:#a92727;
+}
+
+.fa-wrench{
+color: #26597F
+}
+.fa-plus{
+color: 
+}
 h2{
   font-size: 3em;
   padding-top: 20px;
 }
+
 #subject {
   background:#26597F; /* For browsers that do not support gradients */
-    background: linear-gradient(#26597F, #3F647F); /*Standard syntax (must be last)*/
+  /* background-image: linear-gradient(-66deg,#253646,#607075); Standard syntax (must be last) */
     height: 100%;
-
   color: whitesmoke; 
 
 }
@@ -62,6 +76,7 @@ h2{
   margin: 30px 0;
   margin-left: -25px;
   cursor: pointer;
+  border-bottom:solid white 1px;
  
 }
 
@@ -74,7 +89,7 @@ h2{
 
 .flashCardHolder{
   width: 500px;
-  
+  box-shadow: 1px 1px 7px black;
   margin: 0 auto;
   /* border: solid 1px blue; */
   
@@ -94,7 +109,8 @@ h2{
 .flashcard p, .flashcard2 p{
   margin: 125px 135px 10px;
   width: 250px;
-  font-size: 18px;
+  font-size: 1.5em;
+ 
   font-family: Roboto, Calibri, sans-serif;
 }
 
@@ -111,15 +127,16 @@ h2{
 .rightHolder, .leftHolder{
   width: 50px;
   height: 50px;
-  background-color: #32767F;
-  border-radius: 50%;
+  line-height: 55px;
+  background-color: lightgray;
+  border-radius: 10px;
   text-align: center;
-  line-height: 50px;
-  font-size: 20px;
+  font-size: 2em;
   display: inline-block;
-  color: white;
+  color:charcoal;
   margin-top: 30px;
   cursor: pointer;
+  box-shadow: 1px 1px 7px black;
 }
 
 /* Flipping CSS */
@@ -166,10 +183,43 @@ h2{
 
 
 footer{
-  height: 350px;
+  min-height: 350px;
   background-color: lightgray;
+  background-image: url('footer.jpg');
+  color: white;
  
 }
+
+footer section{
+  margin-top: 40px;
+}
+
+#social{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#social li{
+  margin: auto 15px;
+  display: inline-block;
+}
+
+footer h3{
+  margin-top: 0;
+}
+
+.play{
+  width: 156px;
+  height: 60.36px;
+}
+
+.appstore{
+  width: 135px;
+  height: 40px;
+}
+
+
+
 
 
 
@@ -184,23 +234,41 @@ footer{
       nav section.col-md-5 ul li{
         display: inline-block;
       }
+      nav section.col-md-5 ul{
+        width: 100%;
+      }
 
       .jumbotron h1{
         font-size: 3rem;
+      }
+
+      section.col-md-9{
+        background-image: url('web3.png'); 
+        background-repeat: no-repeat;
+        background-position: right;
+  background-size: 100% 100%;
+        
       }
   }
 
   @media only screen and (max-width: 560px) {
     footer.row{
-      margin-top: 400px;}
+      margin-top: 450px;}
       main{
       
         background-image: none;
+        }
+        header{
+         height: 350px;
         }
   
         nav section.col-md-5 ul li{
           display: block;
           float: left;
+        }
+
+        nav section.col-md-5 ul{
+          width: 50%;
         }
   
         .jumbotron h1{
