@@ -1,6 +1,6 @@
 
 var i = 0;
-var txt = 'What does CSS stand for?'; /* The text */
+var txt = htmlcard1.question; /* The text */
 var speed = 75; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
