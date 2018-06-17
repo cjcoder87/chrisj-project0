@@ -3,11 +3,14 @@ html{
   font-size: 16px;
   
 }
+body{
+  background-color: #dbeae9;
+}
 section.col-md-3 ul{
   background-color: white;
   padding-left: 0;
   margin: 0;
-  margin-top: 60px;
+  margin-top: 130px;
   background:#ffffffbf;
 width: 75%;
   border-radius: 10px;
@@ -31,6 +34,8 @@ header{
 box-shadow: 2px 2px 7px gray;
 background: #6097CC; /* For browsers that do not support gradients */
 background: linear-gradient(to bottom right, #6097CC, #78BDFF);
+background-image: url("header.jpg");
+background-repeat: no-repeat;
   color: white;
   font-family: serif, cursive;
  
@@ -257,8 +262,6 @@ h2{
 	transform: rotateY(180deg);
 }
 
-
-
 footer{
   min-height: 450px;
   background-color: lightgray;
@@ -319,15 +322,16 @@ footer h3{
         width: 100%;
       }
 
-      .jumbotron h1{
+      /* .jumbotron h1{
         font-size: 3rem;
-      }
+      } */
 
-      section.col-md-9{
+      #flipping{
         background-image: url('web3.png'); 
         background-repeat: no-repeat;
         background-position: right;
   background-size: 100% 100%;
+  min-height: 350px;
         
       }
 
@@ -370,12 +374,17 @@ footer h3{
   @media only screen and (max-width: 680px) {
     section.col-md-3 ul{
       margin-top: 100px;
-      margin-left: 30%;
-      float: left;
+      margin-right: 50px;
+    }
+    footer.row{
+      margin-top: 575px;
     }
   }
 
   @media only screen and (max-width: 560px) {
+    .back{
+      border-right: solid black 1px
+    }
       main{
       
         background-image: none;
@@ -393,9 +402,9 @@ footer h3{
           width: 50%;
         }
   
-        .jumbotron h1{
+        /* .jumbotron h1{
           font-size: 2.5rem;
-        }
+        } */
         .flip-container, .front, .back{
           width: 95%;
         }
@@ -406,11 +415,8 @@ footer h3{
 
 
 .flashcard p, .flashcard2 p{
-  
   margin-left: 20%;
   width: 60%;
-
- 
 } 
     }
   
