@@ -1,19 +1,19 @@
-var check = 0;
-var check2 = 0;
-$(function() {
-$('.flipper').click(function() {
-$('.f1_container').toggleClass('active');
-});
+// var check = 0;
+// var check2 = 0;
+// $(function() {
+// $('.front').click(function() {
+// $('.flip-container').toggleClass('flip');
+// });
 
-$('.flipper').mouseover(function() {
-if(check % 2 == 0){
-  $('.f1_container').addClass('active');
-  check++;
-  }else {
-    return false;
-  }
+// $('.front').mouseover(function() {
+// if(check % 2 == 0){
+//   $('.flip-container').addClass('flip');
+//   check++;
+//   }else {
+//     return false;
+//   }
 
-});
+// });
 
 // $('.flipper').mouseout(function() {
 //   if(check2 % 2 == 0){
@@ -27,4 +27,4 @@ if(check % 2 == 0){
 // });
 // Picture Flip http://jsfiddle.net/YaUPs/
 
-}); // ready function Close tag
+// }); // ready function Close tag

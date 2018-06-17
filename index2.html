@@ -13,16 +13,16 @@
 <body class="container-fluid">
     <header class="row jumbotron">
 <nav class="row">
-  <section class="col-md-7">
+  <section class="col-md-8">
     <h1>The Developer's Study Guide</h1>
   </section>
-  <section class="col-md-5 pull-right">
-    <ul>
+  <section class="col-md-4 pull-right">
+    <!-- <ul>
       <li><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
       <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
       <li><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
 
-    </ul>
+    </ul> -->
   </section>
 </nav>
   
@@ -39,20 +39,21 @@
                 <li>JS</li>
               </ol>
           </section>
-          <section class="col-md-9">
-              <section class="flashCardHolder f1_container">
-                  <section class="shadow f1_card">
-                      <section class="front face">
+          <section class="col-md-6">
+              <section class="flip-container" ontouchstart="this.classList.toggle('hover');"> <!-- fl_container -->
+               
+                  <section class="flipper">  <!-- fl card shadow -->
+                      <section class="front flashcard">
               
-                          <section class="flashcard flipper">
+                        
                             
                             <p id="card1"> </p>
           
-                         </section>   <!-- end of flash card -->
+                  
           
                          </section>   <!--  front face end -->
           
-                          <section class="behind face center flashcard2 flipper">
+                          <section class="back flashcard2">
                               <p>Cascading Style Sheets </p>
           
               
@@ -60,14 +61,30 @@
             </section> <!-- End of Flash Card2 -->
            </section> <!-- End of SHadpw -->
           
-          <section class="leftHolder pull-left"><p>&lt;</p></section>
-          
-          
-          
-          <section class="rightHolder pull-right"><p>&gt;</p></section>
-               
-               </section> <!-- End of Flash Card Holder -->
+         
+           
+               </section> <!-- End of flip-container -->
+
+               <section class="leftHolder pull-left"><p>&lt;</p></section>
+               <section class="rightHolder pull-right"><p>&gt;</p></section>
+           </section > <!--End of section col -->
+          <section class="col-md-3 add">
+              <ul>
+                  <li><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
+                  <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
+                  <li><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
+            
+                </ul>
           </section>
+
+          <!-- <section class="col-md-12">
+             <ul>
+                  <li><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
+                  <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
+                  <li><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
+            
+                </ul>
+          </section> -->
      
   </main>
 
@@ -83,11 +100,11 @@
     </section>
     <section class="col-md-6 pull-right">
       
-     <p>The Developer's Study Guide was designed to help beginning developers learn the basic concepts of HTML, CSS, and JavaScript. Do not use this site as your only reference to study. By no means is this everything you will need to learn to be succesful in your career.</p> <p> Please use the <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network(MDN)</a>  because they have full documentation on all subjects.</p>
-     <p>&copy; By Christopher Jackson All Rights Reserved</p>
+     <p>The Developer's Study Guide was designed to help beginning developers learn the basic concepts of HTML, CSS, and JavaScript.</p> <p></p> Do not use this site as your only reference to study. By no means is this everything you will need to learn to be succesful in your career.</p> <p> Please use the <a target="_blank" href="https://developer.mozilla.org/en-US/">Mozilla Developer Network(MDN)</a>  because they have full documentation on all subjects.</p>
+     <p>&copy; 2018 By Christopher Jackson All Rights Reserved</p>
 
-     <img class="appstore" src="appstore.svg" alt="Download from AppStore">
-     <img class="play" src="play.png" alt="Download from AppStore">
+     <a href="https://www.apple.com/ios/app-store/" target="_blank"> <img class="appstore" src="appstore.svg" alt="Download from AppStore"></a>
+     <a href="https://play.google.com/store?hl=en" target=_blank><img class="play" src="play.png" alt="Download from Google Play"></a>
 
   </section>
 
