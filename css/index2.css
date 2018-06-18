@@ -3,6 +3,20 @@ html{
   font-size: 16px;
   
 }
+#cssleft, #cssright, #jsright, #jsleft{
+  display: none;
+}
+#subjectmatterquestions, #subjectmatteranswers{
+  width: 80%;
+}
+#updateCard input[type='radio'], #updateCard label{
+display: inline-block;
+width: 30px;
+}
+
+select{
+  display: block;
+}
 #failmessage, #failmessage2, #failmessage3{
   color: red;
   display: none;
@@ -10,8 +24,10 @@ html{
   margin: 0;
 
 }
-#displaycards, #studyDirections{
-  overflow: scroll;
+
+#displaycards, #studyDirections, #updateCard, #deleteCard{
+  overflow: auto;
+  overflow-x: hidden;
 }
 body{
   background-color: #dbeae9;

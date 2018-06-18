@@ -74,8 +74,24 @@
               <h2>Update</h2>
               <form action="">
                   <input type="text" value="Name of Index Card" readonly>
-                  <input type="text" placeholder="Question">
-                  <input type="text" placeholder="Answer">
+                <select name="subjectmatterquestions" id="subjectmatterquestions">
+                  <option selected value="Select a Question">Select a Question</option>
+                </select>
+                <select name="subjectmatteranswers" id="subjectmatteranswers">
+                    <option value="Select an Answer" selected>Select an Answer</option>
+                  
+                  </select>
+                  
+                  <label for="htmlradio">HTML</label>
+                <input name="update" id="htmlradio" type="radio" value="HTML" onchange="">
+                <label for="cssradio">CSS</label>
+                <input name="update" id="cssradio" type="radio" value="CSS" onchange="">
+                <label for="jsradio">JS</label>
+                <input name="update" id="jsradio" type="radio" value="JS" onchange="">
+                  
+                  
+                  <input id="updateQuestion" type="text" placeholder="Question">
+                  <input id="updateAnswer" type="text" placeholder="Answer">
                   <button type="button"class="btn btn-primary">Update</button>
                 </form>
 
@@ -86,8 +102,8 @@
               <h2>Delete</h2>
               <form action="">
                   <input type="text" value="Name of Index Card" readonly>
-                  <input type="text" placeholder="Question">
-                  <input type="text" placeholder="Answer">
+                  <input id="deleteQuestion" type="text" placeholder="Question">
+                  <input id="deleteAnswer" type="text" placeholder="Answer">
                   <button type="button"class="btn btn-danger">Delete</button>
 
               </section>
@@ -129,7 +145,7 @@
                 <h3>Overview</h3>
                 <p>Hover over the index card to see the answer.</p>
                 <h3>Slider</h3>
-                <p>THe left and right allow you to swap between the index cards in the respective direction of the slider arrows.</p>
+                <p>The left and right allow you to swap between the index cards in the respective direction of the slider arrows.</p>
 
                 <h3>Add Card</h3>
                 <p>This allows you to add a new index card. You must select a subject followed by writing a question and answer. Click the add button to add them to the </p>
@@ -155,8 +171,12 @@
                       </section> <!-- End of Flash Card2 --> 
                   </section> <!-- End of flipper -->
                </section> <!-- End of flip-container -->
-               <section class="leftHolder pull-left"><p>&lt;</p></section>
-               <section class="rightHolder pull-right"><p>&gt;</p></section>
+               <section id="htmlleft" class="leftHolder pull-left" onclick="leftHTML();"><p>&lt;</p></section>
+               <section id="htmlright" class="rightHolder pull-right" onclick="rightHTML();"><p>&gt;</p></section>
+               <section id="cssleft" class="leftHolder pull-left" onclick="leftCSS();"><p>&lt;</p></section>
+               <section id="cssright" class="rightHolder pull-right" onclick="rightCSS();"><p>&gt;</p></section>
+               <section id="jsleft" class="leftHolder pull-left" onclick="leftJS();"><p>&lt;</p></section>
+               <section id="jsright" class="rightHolder pull-right" onclick="rightJS();"><p>&gt;</p></section>
               </section> <!--End of section col -->
 
           <section class="col-md-3 add">
@@ -207,6 +227,8 @@
   <script src="script/placement.js"></script>
   <script src="script/add.js"></script>
   <script src="script/modify.js"></script>
+  <script src="script/switch.js"></script>
+
 
 
 
