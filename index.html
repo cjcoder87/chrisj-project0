@@ -10,9 +10,11 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script src="script/create.js"></script>
 
+
   <title>The Devs Study Guide</title>
 </head>
 <body class="container-fluid">
+  <section id="filter" onclick="closeAll()"></section>
     <header class="row jumbotron">
 <nav class="row">
   <section class="col-md-12">
@@ -20,7 +22,7 @@
   </section>
 
   <section class="col-md-12">
-     <p class="pull-right">How to Play</p>
+     <p class="pull-right btn btn-primary" onclick="study()" id="directions">How to Study</p>
     </section>
  
 </nav>
@@ -39,6 +41,51 @@
               </ol>
           </section>
           <section id="flipping" class="col-md-6">
+<!-- 
+              <button id="handle">Fade</button> 
+              <div id="slideSource">Whatever you want here - images or text</div> -->
+
+            <section id="addCard">
+              <p class="pull-right" onclick="closeAll()">X</p>
+              <h2>Add</h2>
+              <form action="">
+                <input type="text" value="Name of Index Card" readonly>
+                <input type="text" placeholder="Question">
+                <input type="text" placeholder="Answer">
+                <button type="button"class="btn btn-success">Add</button>
+              </form>
+            </section>
+            <section id="updateCard">
+              <p class="pull-right" onclick="closeAll()">X</p>
+              <h2>Update</h2>
+              <form action="">
+                  <input type="text" value="Name of Index Card" readonly>
+                  <input type="text" placeholder="Question">
+                  <input type="text" placeholder="Answer">
+                  <button type="button"class="btn btn-primary">Update</button>
+                </form>
+
+            </section>
+
+            <section id="deleteCard">
+              <p class="pull-right" onclick="closeAll()">X</p>
+              <h2>Delete</h2>
+              <form action="">
+                  <input type="text" value="Name of Index Card" readonly>
+                  <input type="text" placeholder="Question">
+                  <input type="text" placeholder="Answer">
+                  <button type="button"class="btn btn-danger">Add</button>
+                </form>
+
+            </section>
+
+            <section id="studyDirections">
+                <p class="pull-right" onclick="closeAll()">X</p>
+                <h2>How to Study</h2>
+              <form action=""></form>
+
+            </section>
+
             <!-- Flipping Card -->
               <section class="flip-container" ontouchstart="this.classList.toggle('hover');"> <!-- fl_container -->
                   <section class="flipper">  <!-- fl card shadow -->
@@ -55,11 +102,10 @@
               </section> <!--End of section col -->
 
           <section class="col-md-3 add">
-              <ul>
-                  <li><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
-                  <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
-                  <li><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
-            
+              <ul id="cardModify">
+                  <li id="plus" onclick="showadd()"><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
+                  <li id="wrench" onclick="showupdate()"><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
+                  <li id="trash" onclick="showdelete()"><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
                 </ul>
           </section>
 
@@ -99,6 +145,9 @@
   </footer>
   <script src="script/placement.js"></script>
   <script src="script/script2.js"></script>
+  <script src="script/modify.js"></script>
+
+
 
   
 </body>

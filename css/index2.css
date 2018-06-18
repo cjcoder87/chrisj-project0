@@ -6,13 +6,23 @@ html{
 body{
   background-color: #dbeae9;
 }
+#filter{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(37, 31, 31, 0.651);
+  position:fixed;
+  z-index: 2000;
+  display:none;
+  left: 0;
+  top: 0;
+}
 section.col-md-3 ul{
   background-color: white;
   padding-left: 0;
   margin: 0;
   margin-top: 130px;
   background:#ffffffbf;
-width: 75%;
+  width: 70%;
   border-radius: 10px;
 }
 section.col-md-3 ul li{
@@ -23,6 +33,8 @@ cursor: pointer;
 
 
 }
+
+
 
 section.col-md-3 ul li:hover{
   background-color: darkgray;
@@ -51,6 +63,11 @@ main{
   height: 500px;
 
   
+}
+
+input{
+  display: block;
+  margin: 20px 5px;
 }
 
 .fa-plus, .fa-trash, .fa-wrench{
@@ -102,18 +119,35 @@ h2{
 #subjects li:hover{
   background-color: #4D9DFF;
 }
-/* .f1_container.active .f1_card{
-  margin-top: 20px;
-} */
 
-/* .flashCardHolder{
-  
-  box-shadow: 1px 1px 7px black;
-  margin: 0 auto;
-  /* border: solid 1px blue;
-  
-} */
+#directions{
+  cursor: pointer;
+  font-size: 1.5rem;
+}
 
+#addCard, #updateCard, #deleteCard, #studyDirections{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110%;
+  margin-top: 45px;
+  width: 103%;
+  z-index: 9000;
+  border: solid black 1px;
+  background-color: blanchedalmond;
+  display: none;
+
+}
+
+#addCard p, #updateCard p, #deleteCard p, #studyDirections p{
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 15px;
+}
+
+#addCard h2, #updateCard h2, #deleteCard h2, #studyDirections h2{
+  margin: 10px;
+}
 
 
 .flashcard, flashcard2{
@@ -169,53 +203,6 @@ h2{
 .add{
   height: 100%;
 }
-
-/* Flipping CSS */
-/* .flashcard, flashcard2, .flashCardHolder, .f1_container, .face, .f1_card {
-  width: 500px;
-} */
-
-/* .f1_container {
-  position: relative;
-  margin-top: 20px;
- 
-  height: 300px;
-  z-index : 1;
-} */
-/* .f1_container {
-  -webkit-perspective: 1000;
-  perspective: 1000;
-} */
-/* entire container, keeps perspective */
-
-/* .f1_card {
-  height: 100%;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: all 1.0s linear;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
-} */
-
-/* .f1_container.active .f1_card {
-  -webkit-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-}
-.face {
-  position: absolute;
-  height: 300px;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.face.behind {
-  display: block;
-  -webkit-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-  box-sizing: border-box;
-  /* color: white; 
-  text-align: center;
-  cursor: pointer;
-} */
-
 
 .flip-container {
   -webkit-perspective: 1000;
@@ -298,11 +285,6 @@ footer h3{
   height: 40px;
 }
 
-
-
-
-
-
 @media only screen and (max-width: 1000px) {
   footer.row{
     margin-top: 500px;}
@@ -322,9 +304,9 @@ footer h3{
         width: 100%;
       }
 
-      /* .jumbotron h1{
+      .jumbotron h1{
         font-size: 3rem;
-      } */
+      }
 
       #flipping{
         background-image: url('../images/web3.png'); 
@@ -337,13 +319,9 @@ footer h3{
 
       section.col-md-3 ul{
         margin:0;
-        /* top: 50px; */
         width: 60%;
         float: right;
-    /* left: 150px;
-    position: absolute; */
-    background-color: initial;
-        
+    background-color: initial;   
       }
 
       section.col-md-3 ul li{
@@ -367,6 +345,13 @@ footer h3{
 
       .add ul{
         width: 50%;
+      }
+
+      #addCard, #updateCard, #deleteCard, #studyDirections{
+      
+        margin-top: -10px;
+        width: 100%;
+   
       }
      
   }
@@ -402,16 +387,12 @@ footer h3{
           width: 50%;
         }
   
-        /* .jumbotron h1{
+        .jumbotron h1{
           font-size: 2.5rem;
-        } */
+        }
         .flip-container, .front, .back{
           width: 95%;
         }
-        /* .flashcard, flashcard2, .flashCardHolder, .f1_container, .face, .f1_card {
-  width: 100%;
-} */
-
 
 
 .flashcard p, .flashcard2 p{
