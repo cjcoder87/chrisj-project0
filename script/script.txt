@@ -1,0 +1,28 @@
+each subject needs it own function
+
+Adding Cards
+Choose which subject
+Take value from input
+create object from input based on subject chosen
+assign variable automatically to each object for specific subject
+reset form
+
+Updating Cards
+pull value from object currently being viewed
+output value in input field
+take new input and override the current object being viewed
+reset form
+
+Deleting
+pull value from object currently being viewed
+destroy object with button
+reset form
+
+
+left slide
+decrement the assigned variable
+display the object on the note card
+
+right slide
+increment the assigned variable
+display the object on the note card

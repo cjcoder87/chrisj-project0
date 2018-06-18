@@ -1,1 +1,1 @@
-document.querySelector('.back p').innerHTML = htmlcard1.answer;
+document.querySelector('.back p').innerHTML = HtmlAnswer[0];

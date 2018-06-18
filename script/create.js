@@ -1,26 +1,66 @@
-function HtmlNotes(question, answer) {
-  this.question = question;
-  this.answer = answer;
+
+var HtmlQuestion = ['What does HTML stand for?'];
+var HtmlAnswer = ['Hyper Text Markup Language'];
+var CssQuestion = ['What does CSS stand for?'];
+var CssAnswer = ['Cascading Style Sheet'];
+var JsQuestion = ['What does JS stand for?'];
+var JsAnswer = ['JavaScript'];
+
+function printQuestions(){
+for (i=0;i<HtmlQuestion.length;i++)
+{
+document.querySelector("#displayhtmlcards").innerHTML += '<li>' + HtmlQuestion[i] + '</li>';
 }
 
-function CssNotes(question, answer) {
-  this.question = question;
-  this.answer = answer;
 }
 
-function JsNotes(question, answer) {
-  this.question = question;
-  this.answer = answer;
-}
+function printQuestions2(){
+  for (i=0;i<HtmlAnswer.length;i++)
+  {
+  document.querySelector("#displaycsscards").innerHTML += '<li>' + CssQuestion[i] + '</li>';
+  }
+  
+  }
 
-var htmlcard1 = new HtmlNotes('What does HTML stand for?', 'Hyper Text Markup Language');
-var csscard1 = new CssNotes('What does CSS stand for?', 'Cascading Style Sheet');
-var jscard1 = new JsNotes('What does JS stand for?', 'JavaScript');
+  function printQuestions3(){
+    for (i=0;i<CssQuestion.length;i++)
+    {
+    document.querySelector("#displayjscards").innerHTML += '<li>' + JsQuestion[i] + '</li>';
+    }
+    
+    }
 
-// console.log(htmlcard1.question);
-// console.log(csscard1.question);
-// console.log(jscard1.question);
+    function printAnswer(){
+      for (i=0;i<CssAnswer.length;i++)
+      {
+      document.querySelector("#displayhtmlcardsa").innerHTML += '<li>' + HtmlAnswer[i] + '</li>';
+      }
+      
+      }
 
+      function printAnswer2(){
+        for (i=0;i<JsQuestion.length;i++)
+        {
+        document.querySelector("#displaycsscardsa").innerHTML += '<li>' + CssAnswer[i] + '</li>';
+        }
+        
+        }
 
+        function printAnswer3(){
+          for (i=0;i<JsAnswer.length;i++)
+          {
+          document.querySelector("#displayjscardsa").innerHTML += '<li>' + JsAnswer[i] + '</li>';
+          }
+          
+          }
+
+          function printAll(){
+            printQuestions()
+            printQuestions2()
+            printQuestions3()
+            printAnswer();
+            printAnswer2();
+            printAnswer3();
+          }
 
 

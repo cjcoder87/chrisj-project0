@@ -48,11 +48,25 @@
             <section id="addCard">
               <p class="pull-right" onclick="closeAll()">X</p>
               <h2>Add</h2>
+              <span id="failmessage">Choose a Subject.</span>
+              
               <form action="">
-                <input type="text" value="Name of Index Card" readonly>
-                <input type="text" placeholder="Question">
-                <input type="text" placeholder="Answer">
-                <button type="button"class="btn btn-success">Add</button>
+                  
+
+                <select name="subjects" id="pickSubject">
+                    <option id="pick" value="Pick a Subject" disabled selected>Pick a Subject</option>
+
+                  <option id="html" value="HTML">HTML</option>
+                  <option id="css" value="CSS">CSS</option>
+                  <option id="js" value="JS">JS</option>
+                </select>
+                <!-- <input id="varname" type="text" value="" hidden> -->
+                <span id="failmessage2">Write a Question.</span>
+             
+                <input id="addQuestion" type="text" placeholder="Question">
+                <span id="failmessage3">Write an Answer.</span>
+                <input id="addAnswer" type="text" placeholder="Answer">
+                <button type="button"class="btn btn-success" onclick="addcards();">Add</button>
               </form>
             </section>
             <section id="updateCard">
@@ -74,15 +88,59 @@
                   <input type="text" value="Name of Index Card" readonly>
                   <input type="text" placeholder="Question">
                   <input type="text" placeholder="Answer">
-                  <button type="button"class="btn btn-danger">Add</button>
-                </form>
+                  <button type="button"class="btn btn-danger">Delete</button>
+
+              </section>
+                  <section id="displaycards">
+                      <p class="pull-right" onclick="closeAll()">X</p>
+                      <h2>Cards</h2>
+                      <h3>Html Questions</h3>
+                      <ol id="displayhtmlcards">
+                        </ol>
+                      <h3>Html Answers</h3>
+
+                        <ol id="displayhtmlcardsa">
+                          </ol>
+                      <h3>CSS Questions</h3>
+
+                        <ol id="displaycsscards">
+                          </ol>
+                      <h3>CSS Answers</h3>
+
+                          <ol id="displaycsscardsa">
+                            </ol>
+
+                      <h3>JS Questions</h3>
+
+                          <ol id="displayjscards">
+                            </ol>
+
+                      <h3>JS Answers</h3>
+
+                            <ol id="displayjscardsa">
+                              </ol>
+                      
 
             </section>
 
             <section id="studyDirections">
                 <p class="pull-right" onclick="closeAll()">X</p>
                 <h2>How to Study</h2>
-              <form action=""></form>
+                <h3>Overview</h3>
+                <p>Hover over the index card to see the answer.</p>
+                <h3>Slider</h3>
+                <p>THe left and right allow you to swap between the index cards in the respective direction of the slider arrows.</p>
+
+                <h3>Add Card</h3>
+                <p>This allows you to add a new index card. You must select a subject followed by writing a question and answer. Click the add button to add them to the </p>
+                <h3>Update Card</h3>
+                <p>This allows you to modify currently existing index cards by clecking the update button.</p>
+                <h3>Delete Card</h3>
+                <p>This allows you to delete currently existing index cards by clicking the delete button.</p>
+                <h3>Show Cards</h3>
+                <p>This shows you the entire deck of questions created.</p>
+                
+             
 
             </section>
 
@@ -106,6 +164,8 @@
                   <li id="plus" onclick="showadd()"><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
                   <li id="wrench" onclick="showupdate()"><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
                   <li id="trash" onclick="showdelete()"><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
+                  <li id="eye" onclick="printAll();showcards();"><i class="fas fa-eye">&nbsp;&nbsp;&nbsp;&nbsp;Show Cards</i></li>
+                  
                 </ul>
           </section>
 
@@ -143,9 +203,11 @@
 
 
   </footer>
-  <script src="script/placement.js"></script>
   <script src="script/script2.js"></script>
+  <script src="script/placement.js"></script>
+  <script src="script/add.js"></script>
   <script src="script/modify.js"></script>
+
 
 
 

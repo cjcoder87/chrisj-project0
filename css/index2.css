@@ -3,8 +3,21 @@ html{
   font-size: 16px;
   
 }
+#failmessage, #failmessage2, #failmessage3{
+  color: red;
+  display: none;
+  font-size: .8em;
+  margin: 0;
+
+}
+#displaycards, #studyDirections{
+  overflow: scroll;
+}
 body{
   background-color: #dbeae9;
+}
+select{
+  width: 150px;
 }
 #filter{
   width: 100vw;
@@ -70,7 +83,7 @@ input{
   margin: 20px 5px;
 }
 
-.fa-plus, .fa-trash, .fa-wrench{
+.fa-plus, .fa-trash, .fa-wrench,.fa-eye{
   font-size: 1.2rem;
 }
 .fa-plus{
@@ -83,6 +96,10 @@ input{
 
 .fa-wrench{
 color: #26597F;
+}
+
+.fa-eye{
+  color: black;
 }
 
 section.col-md-3 ul li:hover{
@@ -124,8 +141,10 @@ h2{
   cursor: pointer;
   font-size: 1.5rem;
 }
-
-#addCard, #updateCard, #deleteCard, #studyDirections{
+#addCard input, #updateCard input, #deleteCard input{
+  width: 350px;
+}
+#addCard, #updateCard, #deleteCard, #studyDirections, #displaycards{
   position: absolute;
   top: 0;
   left: 0;
@@ -137,9 +156,21 @@ h2{
   background-color: blanchedalmond;
   display: none;
 
+
+}
+form input{
+  margin-top: 0;
+}
+select{
+  margin-bottom: 5px;
 }
 
-#addCard p, #updateCard p, #deleteCard p, #studyDirections p{
+#addCard form button, #updateCard form button, #deleteCard form button{
+  
+  margin-left: 300px;
+}
+
+#addCard p, #updateCard p, #deleteCard p, #studyDirections p, #displaycards p{
   font-size: 1.5rem;
   cursor: pointer;
   margin: 15px;
@@ -328,7 +359,7 @@ footer h3{
         width:250px;
       }
 
-      .fa-plus, .fa-trash, .fa-wrench{
+      .fa-plus, .fa-trash, .fa-wrench, .fa-eye{
         font-size: 1.5rem;
       }
 
@@ -353,6 +384,9 @@ footer h3{
         width: 100%;
    
       }
+      #displaycards{
+        width: 100%;
+      }
      
   }
 
@@ -362,7 +396,7 @@ footer h3{
       margin-right: 50px;
     }
     footer.row{
-      margin-top: 575px;
+      margin-top: 600px;
     }
   }
 
