@@ -23,8 +23,7 @@ if(document.querySelector('#pickSubject').value == 'HTML'){
       HtmlAnswer.push(document.querySelector('#addAnswer').value);
       document.querySelector('#addQuestion').value = null;
       document.querySelector('#addAnswer').value = null;
-      document.querySelector('#failmessage').style.display='block';
-      closeAll();
+     
       }
   
 } 
@@ -44,13 +43,10 @@ if(document.querySelector('#pickSubject').value == 'CSS'){
   CssAnswer.push(document.querySelector('#addAnswer').value);
   document.querySelector('#addQuestion').value = null;
   document.querySelector('#addAnswer').value = null;
-  document.querySelector('#failmessage').style.display='block';
+ 
 
-  closeAll();
       }
   }
-  
- 
 
 if(document.querySelector('#pickSubject').value == 'JS'){
 
@@ -66,13 +62,14 @@ if(document.querySelector('#pickSubject').value == 'JS'){
   JsAnswer.push(document.querySelector('#addAnswer').value);
   document.querySelector('#addQuestion').value = null;
   document.querySelector('#addAnswer').value = null;
-  document.querySelector('#failmessage').style.display='block';
+  
 
-  closeAll();
+  
       }
   
 
-}else{
+}
+else{
   //Write Validation Code Here
   
   document.querySelector('#failmessage').style.display='block';

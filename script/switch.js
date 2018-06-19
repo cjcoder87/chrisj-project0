@@ -91,6 +91,10 @@ function leftJS(){
    }
 }
 
+// setTimeout(switchHtmlSlider, 3000);
+// setTimeout(switchCssSlider, 3000);
+// setTimeout(switchJsSlider, 3000);
+
 function switchHtmlSlider(){
 document.querySelector('#htmlleft').style.display = 'block';
 document.querySelector('#htmlright').style.display = 'block';
@@ -98,6 +102,9 @@ document.querySelector('#cssleft').style.display = 'none';
 document.querySelector('#cssright').style.display = 'none';
 document.querySelector('#jsleft').style.display = 'none';
 document.querySelector('#jsright').style.display = 'none';
+document.querySelector('#card1').style.display = 'none';
+document.querySelector('.flashcard2 p').style.display = 'none';
+
 
 document.querySelector("#card1").innerHTML = HtmlQuestion[0];
 document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[0];
@@ -118,6 +125,8 @@ document.querySelector('#cssleft').style.display = 'block';
 document.querySelector('#cssright').style.display = 'block';
 document.querySelector('#jsleft').style.display = 'none';
 document.querySelector('#jsright').style.display = 'none';
+document.querySelector('#card1').style.display = 'none';
+document.querySelector('.flashcard2 p').style.display = 'none';
 
 document.querySelector("#card1").innerHTML = CssQuestion[0];
 document.querySelector('.flashcard2 p').innerHTML = CssAnswer[k];
@@ -134,6 +143,8 @@ document.querySelector('#cssleft').style.display = 'none';
 document.querySelector('#cssright').style.display = 'none';
 document.querySelector('#jsleft').style.display = 'block';
 document.querySelector('#jsright').style.display = 'block';
+document.querySelector('#card1').style.display = 'none';
+document.querySelector('.flashcard2 p').style.display = 'none';
 
 document.querySelector("#card1").innerHTML = JsQuestion[0];
 document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
