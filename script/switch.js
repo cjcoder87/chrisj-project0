@@ -129,7 +129,7 @@ document.querySelector('#card1').style.display = 'none';
 document.querySelector('.flashcard2 p').style.display = 'none';
 
 document.querySelector("#card1").innerHTML = CssQuestion[0];
-document.querySelector('.flashcard2 p').innerHTML = CssAnswer[k];
+document.querySelector('.flashcard2 p').innerHTML = CssAnswer[0];
 j = 0;
 
 document.querySelector('#htmllink').style.backgroundColor = 'initial';
@@ -147,7 +147,7 @@ document.querySelector('#card1').style.display = 'none';
 document.querySelector('.flashcard2 p').style.display = 'none';
 
 document.querySelector("#card1").innerHTML = JsQuestion[0];
-document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
+document.querySelector('.flashcard2 p').innerHTML = JsAnswer[0];
 k=0;
 
 document.querySelector('#htmllink').style.backgroundColor = 'initial';
