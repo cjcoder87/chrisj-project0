@@ -14,34 +14,34 @@ document.querySelector("#displayhtmlcards").innerHTML += '<li>' + HtmlQuestion[i
 
 }
 
-function printQuestions2(){
+function printAnswer(){
   for (i=0;i<HtmlAnswer.length;i++)
   {
-  document.querySelector("#displaycsscards").innerHTML += '<li>' + HtmlQuestion[i] + '</li>';
+  document.querySelector("#displayhtmlcardsa").innerHTML += '<li>' + HtmlAnswer[i] + '</li>';
   }
   
   }
 
-  function printQuestions3(){
+  function printQuestions2(){
     for (i=0;i<CssQuestion.length;i++)
     {
-    document.querySelector("#displayjscards").innerHTML += '<li>' + CssQuestion[i] + '</li>';
+    document.querySelector("#displaycsscards").innerHTML += '<li>' + CssQuestion[i] + '</li>';
     }
     
     }
 
-    function printAnswer(){
+    function printAnswer2(){
       for (i=0;i<CssAnswer.length;i++)
       {
-      document.querySelector("#displayhtmlcardsa").innerHTML += '<li>' + CssAnswer[i] + '</li>';
+      document.querySelector("#displaycsscardsa").innerHTML += '<li>' + CssAnswer[i] + '</li>';
       }
       
       }
 
-      function printAnswer2(){
+      function printQuestions3(){
         for (i=0;i<JsQuestion.length;i++)
         {
-        document.querySelector("#displaycsscardsa").innerHTML += '<li>' + JsQuestion[i] + '</li>';
+        document.querySelector("#displayjscards").innerHTML += '<li>' + JsQuestion[i] + '</li>';
         }
         
         }

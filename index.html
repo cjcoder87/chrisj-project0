@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/index2.css">
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="script/create.js"></script>
 
 
@@ -35,9 +35,9 @@
           <section id="subject" class="col-md-3">
               <h2>Subjects</h2>
               <ol id="subjects">
-                <li>HTML</li>
-                <li> CSS</li>
-                <li>JS</li>
+                <li id="htmllink" onclick="switchHtmlSlider()">HTML</li>
+                <li id="csslink" onclick="switchCssSlider()"> CSS</li>
+                <li id="jslink" onclick="switchJsSlider()">JS</li>
               </ol>
           </section>
           <section id="flipping" class="col-md-6">
@@ -49,6 +49,7 @@
               <p class="pull-right" onclick="closeAll()">X</p>
               <h2>Add</h2>
               <span id="failmessage">Choose a Subject.</span>
+              <span class="statusmessage">You Have added a Card.</span>
               
               <form action="">
                   

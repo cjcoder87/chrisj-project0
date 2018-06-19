@@ -1,3 +1,6 @@
+document.querySelector("#card1").innerHTML = HtmlQuestion[0];
+
+
 
 function closeAll(){
   document.querySelector('#addCard').style.display='none';
@@ -15,12 +18,12 @@ function closeAll(){
   document.querySelector('#displaycsscardsa').innerHTML='';
   document.querySelector('#displayjscards').innerHTML='';
   document.querySelector('#displayjscardsa').innerHTML='';
+  document.querySelector('.statusmessage').style.display='none';
 
 
 
 }
 
-document.querySelector("#card1").innerHTML = HtmlQuestion[0];
 
 function showadd(){
   document.querySelector('#addCard').style.display="block";

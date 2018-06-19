@@ -3,6 +3,14 @@ html{
   font-size: 16px;
   
 }
+#htmllink{
+  background-color: #1b4473;
+}
+.statusmessage{
+  color: green;
+  font-size: .8em;
+  display: none;
+}
 #cssleft, #cssright, #jsright, #jsleft{
   display: none;
 }
@@ -12,8 +20,11 @@ html{
 #updateCard input[type='radio'], #updateCard label{
 display: inline-block;
 width: 30px;
-}
 
+}
+#card1, .flashcard2 p{
+  text-align: center;
+}
 select{
   display: block;
 }
