@@ -25,13 +25,19 @@ width: 30px;
 #card1, .flashcard2 p{
   text-align: center;
 }
-select{
+select.btn{
   display: block;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  width: 200px;
+}
+.btn-success{
+  background-color: #428042;
 }
 #failmessage, #failmessage2, #failmessage3, #deleteSpan{
   color: red;
   display: none;
-  font-size: .8em;
+  font-size: .9em;
   margin: 0;
 
 }
@@ -176,16 +182,35 @@ h2{
 }
 #addCard input, #updateCard input, #deleteCard input{
   width: 350px;
+  height: 60px;
+  font-weight: bold;
+font-size: 1em;
+font-size: 1.1em;
+text-align: center;
+}
+#deleteCard input{
+background-color:#eca19f;
+
+}
+
+#updateCard input{
+background-color: #84aaff;
+}
+#addCard input{
+  background-color:#87ff90;
 }
 #addCard, #updateCard, #deleteCard, #studyDirections, #displaycards{
   position: absolute;
   top: 0;
   left: 0;
-  height: 110%;
+  height: 120%;
   margin-top: 45px;
   width: 103%;
   z-index: 9000;
   border: solid black 1px;
+  background-image: url('../images/index3.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-color: blanchedalmond;
   display: none;
 
@@ -211,6 +236,7 @@ select{
 
 #addCard h2, #updateCard h2, #deleteCard h2, #studyDirections h2{
   margin: 10px;
+  font-family: 'Opens Sans', Roboto, Calibri, sans-serif;
 }
 
 
@@ -285,7 +311,7 @@ select{
 
 /* flip speed goes here */
 .flipper {
-	transition: 0.6s;
+	transition: 1.0s;
 	transform-style: preserve-3d;
     margin: 25px auto;
   position: relative;
@@ -347,6 +373,77 @@ footer h3{
 .appstore{
   width: 135px;
   height: 40px;
+}
+
+/* Placeholder Text */
+
+::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:-moz-placeholder {
+  color: #000;
+  opacity: 0.5;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+::-moz-placeholder {
+  color: #000;
+  opacity: 0.5;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:-ms-input-placeholder {  
+  color: #000;
+  opacity: 0.5;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Place Holder CSS for Focus */
+:hover::-webkit-input-placeholder {
+  opacity: 0.75;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:hover:-moz-placeholder {
+  opacity: 0.75;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:hover::-moz-placeholder {
+  opacity: 0.75;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:hover:-ms-input-placeholder {  
+  opacity: 0.75;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Place Holder CSS for Focus */
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus:-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus:-ms-input-placeholder {  
+  opacity: 0;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
 }
 
 @media only screen and (max-width: 1000px) {

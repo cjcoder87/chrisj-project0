@@ -54,7 +54,7 @@
               <form action="">
                   
 
-                <select name="subjects" id="pickSubject">
+                <select name="subjects" id="pickSubject" class="btn btn-success dropdown-toggle">
                     <option id="pick" value="Pick a Subject" disabled selected>Pick a Subject</option>
 
                   <option id="html" value="HTML">HTML</option>
@@ -91,8 +91,8 @@
                 <input name="update" id="jsradio" type="radio" value="JS" onchange=""> -->
                   
                   <span id="updateSpan"></span>
-                  <input id="updateQuestion" type="text" placeholder="Question">
-                  <input id="updateAnswer" type="text" placeholder="Answer">
+                  <input id="updateQuestion" type="text" placeholder="Update Question">
+                  <input id="updateAnswer" type="text" placeholder="Update Answer">
                   <button id="updateButton" type="button"class="btn btn-primary">Update</button>
                 </form>
 
@@ -104,8 +104,8 @@
               <form action="">
                   <span id="deleteSpan"></span>
 
-                  <input id="deleteQuestion" type="text" placeholder="Question">
-                  <input id="deleteAnswer" type="text" placeholder="Answer">
+                  <input id="deleteQuestion" type="text" readonly>
+                  <input id="deleteAnswer" type="text" readonly>
                   <button type="button" id="deleteButton" class="btn btn-danger">Delete</button>
 
               </section>
