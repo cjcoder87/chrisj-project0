@@ -28,12 +28,18 @@ width: 30px;
 select{
   display: block;
 }
-#failmessage, #failmessage2, #failmessage3{
+#failmessage, #failmessage2, #failmessage3, #deleteSpan{
   color: red;
   display: none;
   font-size: .8em;
   margin: 0;
 
+}
+#updateSpan{
+  color: blue;
+  display: none;
+  font-size: .8em;
+  margin: 0;
 }
 
 #displaycards, #studyDirections, #updateCard, #deleteCard{

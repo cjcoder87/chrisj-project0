@@ -1,4 +1,3 @@
-
 var HtmlQuestion = ['What does HTML stand for?'];
 var HtmlAnswer = ['Hyper Text Markup Language'];
 var CssQuestion = ['What does CSS stand for?'];

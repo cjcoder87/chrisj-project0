@@ -1,7 +1,5 @@
 document.querySelector("#card1").innerHTML = HtmlQuestion[0];
 
-
-
 function closeAll(){
   document.querySelector('#addCard').style.display='none';
   document.querySelector('#updateCard').style.display='none';
@@ -12,6 +10,8 @@ function closeAll(){
   document.querySelector('#failmessage').style.display='none';
   document.querySelector('#failmessage2').style.display='none';
   document.querySelector('#failmessage3').style.display='none';
+  document.querySelector('#updateSpan').style.display='none';
+  document.querySelector('#deleteSpan').style.display='none';
   document.querySelector('#displayhtmlcards').innerHTML='';
   document.querySelector('#displayhtmlcardsa').innerHTML='';
   document.querySelector('#displaycsscards').innerHTML='';
@@ -19,8 +19,7 @@ function closeAll(){
   document.querySelector('#displayjscards').innerHTML='';
   document.querySelector('#displayjscardsa').innerHTML='';
   document.querySelector('.statusmessage').style.display='none';
-
-
+  document.querySelector('#pickSubject').value = "Pick a Subject";
 
 }
 

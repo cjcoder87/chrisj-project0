@@ -35,7 +35,7 @@
           <section id="subject" class="col-md-3">
               <h2>Subjects</h2>
               <ol id="subjects">
-                <li id="htmllink" onclick="switchHtmlSlider()">HTML</li>
+                <li id="htmllink" class="active" onclick="switchHtmlSlider()">HTML</li>
                 <li id="csslink" onclick="switchCssSlider()"> CSS</li>
                 <li id="jslink" onclick="switchJsSlider()">JS</li>
               </ol>
@@ -74,7 +74,7 @@
               <p class="pull-right" onclick="closeAll()">X</p>
               <h2>Update</h2>
               <form action="">
-                  <input type="text" value="Name of Index Card" readonly>
+                  <!-- <input type="text" value="Name of Index Card" readonly>
                 <select name="subjectmatterquestions" id="subjectmatterquestions">
                   <option selected value="Select a Question">Select a Question</option>
                 </select>
@@ -88,12 +88,12 @@
                 <label for="cssradio">CSS</label>
                 <input name="update" id="cssradio" type="radio" value="CSS" onchange="">
                 <label for="jsradio">JS</label>
-                <input name="update" id="jsradio" type="radio" value="JS" onchange="">
+                <input name="update" id="jsradio" type="radio" value="JS" onchange=""> -->
                   
-                  
+                  <span id="updateSpan"></span>
                   <input id="updateQuestion" type="text" placeholder="Question">
                   <input id="updateAnswer" type="text" placeholder="Answer">
-                  <button type="button"class="btn btn-primary">Update</button>
+                  <button id="updateButton" type="button"class="btn btn-primary">Update</button>
                 </form>
 
             </section>
@@ -102,10 +102,11 @@
               <p class="pull-right" onclick="closeAll()">X</p>
               <h2>Delete</h2>
               <form action="">
-                  <input type="text" value="Name of Index Card" readonly>
+                  <span id="deleteSpan"></span>
+
                   <input id="deleteQuestion" type="text" placeholder="Question">
                   <input id="deleteAnswer" type="text" placeholder="Answer">
-                  <button type="button"class="btn btn-danger">Delete</button>
+                  <button type="button" id="deleteButton" class="btn btn-danger">Delete</button>
 
               </section>
                   <section id="displaycards">
@@ -230,6 +231,8 @@
   <script src="script/modify.js"></script>
   <script src="script/switch.js"></script>
   <script src="script/transition.js"></script>
+  <script src="script/update.js"></script>
+  <script src="script/delete.js"></script>
 
 
 

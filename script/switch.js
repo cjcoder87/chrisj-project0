@@ -3,48 +3,61 @@ var i = 0;
 var j = 0;
 var k = 0;
 
+function shift(){
+  $(".flashcard2 p").css("display", "none");
+$("#card1").css("display", "none");
+  $(".flip-container").fadeOut("slow");
+$(".flip-container").fadeIn( 400 );
+$(".flashcard2 p").fadeIn( 400 );
+$("#card1").delay(500).fadeIn( 400 );
+}
+
 function rightHTML(){
 console.log('right arrow');
 
-if(i < HtmlQuestion.length-1 && i < HtmlAnswer.length-1){
+if(HtmlQuestion[i+1] !== undefined){
  i++;
+ shift();
  document.querySelector('#card1').innerHTML = HtmlQuestion[i];
  document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
+
  
 }
-else{
-  document.querySelector('#card1').innerHTML = HtmlQuestion[i];
-  document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
-}
+// else{
+//   document.querySelector('#card1').innerHTML = HtmlQuestion[i];
+//   document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
+// }
 }
 
 function leftHTML(){
   console.log('left arrow');
   if(i > 0 ){
     i--;
+    shift();
     document.querySelector('#card1').innerHTML = HtmlQuestion[i];
     document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
     
    }
-   else{
-     document.querySelector('#card1').innerHTML = HtmlQuestion[i];
-     document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
-   }
+  //  else{
+  //    document.querySelector('#card1').innerHTML = HtmlQuestion[i];
+  //    document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
+  //  }
    }
 
 function rightCSS(){
   console.log('right arrow');
 
-if(j < CssQuestion.length-1 && j < CssAnswer.length-1){
+if(CssQuestion[j+1] !== undefined){
  j++;
+ shift();
  document.querySelector('#card1').innerHTML = CssQuestion[j];
  document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
  
 }
-else{
-  document.querySelector('#card1').innerHTML = CssQuestion[j];
-  document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
-}
+// else{
+//   document.querySelector('#card1').innerHTML = CssQuestion[j];
+//   document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
+// }
 
 }
 
@@ -52,49 +65,49 @@ function leftCSS(){
   console.log('left arrow');
   if(j > 0 ){
     j--;
+    shift();
     document.querySelector('#card1').innerHTML = CssQuestion[j];
     document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
     
    }
-   else{
-     document.querySelector('#card1').innerHTML = CssQuestion[j];
-     document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
-   }
+  //  else{
+  //    document.querySelector('#card1').innerHTML = CssQuestion[j];
+  //    document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
+  //  }
 }
 
 function rightJS(){
   console.log('right arrow');
 
-  if(k < JsQuestion.length-1 && k < JsAnswer.length-1){
+  if(JsQuestion[k+1] !== undefined){
    k++;
+   shift();
    document.querySelector('#card1').innerHTML = JsQuestion[k];
    document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
    
   }
-  else{
-    document.querySelector('#card1').innerHTML = JsQuestion[k];
-    document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
-  }
+  // else{
+  //   document.querySelector('#card1').innerHTML = JsQuestion[k];
+  //   document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
+  // }
 }
 
 function leftJS(){
   console.log('left arrow');
   if(k > 0 ){
     k--;
+    shift();
     document.querySelector('#card1').innerHTML = JsQuestion[k];
     document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
     
    }
-   else{
-     document.querySelector('#card1').innerHTML = JsQuestion[k];
-     document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
-   }
+  //  else{
+  //    document.querySelector('#card1').innerHTML = JsQuestion[k];
+  //    document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
+  //  }
 }
 
-// setTimeout(switchHtmlSlider, 3000);
-// setTimeout(switchCssSlider, 3000);
-// setTimeout(switchJsSlider, 3000);
-
+//Switches Sliders
 function switchHtmlSlider(){
 document.querySelector('#htmlleft').style.display = 'block';
 document.querySelector('#htmlright').style.display = 'block';
@@ -106,11 +119,16 @@ document.querySelector('#card1').style.display = 'none';
 document.querySelector('.flashcard2 p').style.display = 'none';
 
 
+
 document.querySelector("#card1").innerHTML = HtmlQuestion[0];
 document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[0];
 i = 0;
 
 document.querySelector('#htmllink').style.backgroundColor = '#1b4473';
+document.querySelector('#htmllink').classList.add("active");
+document.querySelector('#csslink').classList.remove("active");
+document.querySelector('#jslink').classList.remove("active");
+
 document.querySelector('#csslink').style.backgroundColor = 'initial';
 document.querySelector('#jslink').style.backgroundColor = 'initial';
 
@@ -134,6 +152,9 @@ j = 0;
 
 document.querySelector('#htmllink').style.backgroundColor = 'initial';
 document.querySelector('#csslink').style.backgroundColor = '#1b4473';
+document.querySelector('#htmllink').classList.remove("active");
+document.querySelector('#csslink').classList.add("active");
+document.querySelector('#jslink').classList.remove("active");
 document.querySelector('#jslink').style.backgroundColor = 'initial';
 }
 function switchJsSlider(){
@@ -153,4 +174,7 @@ k=0;
 document.querySelector('#htmllink').style.backgroundColor = 'initial';
 document.querySelector('#csslink').style.backgroundColor = 'initial';
 document.querySelector('#jslink').style.backgroundColor = '#1b4473';
+document.querySelector('#htmllink').classList.remove("active");
+document.querySelector('#csslink').classList.remove("active");
+document.querySelector('#jslink').classList.add("active");
 }
