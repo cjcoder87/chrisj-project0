@@ -46,7 +46,7 @@
               <div id="slideSource">Whatever you want here - images or text</div> -->
 
             <section id="addCard">
-              <p class="pull-right" onclick="closeAll()">X</p>
+              <p class="pull-right close" onclick="closeAll()">X</p>
               <h2>Add</h2>
               <span id="failmessage">Choose a Subject.</span>
               <span class="statusmessage">You Have added a Card.</span>
@@ -71,7 +71,7 @@
               </form>
             </section>
             <section id="updateCard">
-              <p class="pull-right" onclick="closeAll()">X</p>
+              <p class="pull-right close" onclick="closeAll()">X</p>
               <h2>Update</h2>
               <form action="">
                   <!-- <input type="text" value="Name of Index Card" readonly>
@@ -99,7 +99,7 @@
             </section>
 
             <section id="deleteCard">
-              <p class="pull-right" onclick="closeAll()">X</p>
+              <p class="pull-right close" onclick="closeAll()">X</p>
               <h2>Delete</h2>
               <form action="">
                   <span id="deleteSpan"></span>
@@ -110,17 +110,17 @@
 
               </section>
                   <section id="displaycards">
-                      <p class="pull-right" onclick="closeAll()">X</p>
-                      <h2>Cards</h2>
-                      <h3>Html Questions</h3>
+                      <p class="pull-right close" onclick="closeAll()">X</p>
+                      <!-- <h2>Cards</h2> -->
+                      <h3 class="well">Html Questions</h3>
                       <section id="displayhtmlcards">
                       </section>
 
-                      <h3>CSS Questions</h3>
+                      <h3 class="well">CSS Questions</h3>
                         <section id="displaycsscards">
                           </section>
 
-                      <h3>JS Questions</h3>
+                      <h3 class="well">JS Questions</h3>
 
                           <section id="displayjscards">
                             </section>
@@ -173,7 +173,7 @@
                   <li id="plus" onclick="showadd()"><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
                   <li id="wrench" onclick="showupdate()"><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
                   <li id="trash" onclick="showdelete()"><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
-                  <li id="eye" onclick="printQuestions();showcards();"><i class="fas fa-eye">&nbsp;&nbsp;&nbsp;&nbsp;Show Cards</i></li>
+                  <li id="eye" onclick="printAll();showcards();"><i class="fas fa-eye">&nbsp;&nbsp;&nbsp;&nbsp;Show Cards</i></li>
                   
                 </ul>
           </section>

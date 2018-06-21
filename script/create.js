@@ -33,8 +33,16 @@ document.querySelector("#displayhtmlcards").innerHTML +=
                       '</section>' +  
                   '</section>' +
               '</section> ';
+}
+d=0;
+}
 
-              document.querySelector("#displaycsscards").innerHTML += 
+
+function printQuestions2(){
+  for (d=0;d<CssQuestion.length;d++)
+  {
+
+document.querySelector("#displaycsscards").innerHTML += 
                 '<section class="flip-container"' +'>' +
                   '<section class="flipper">' +
                       '<section class="front flashcard">' +
@@ -45,6 +53,16 @@ document.querySelector("#displayhtmlcards").innerHTML +=
                       '</section>' +  
                   '</section>' +
               '</section> ';
+
+            }
+            d=0;
+            }
+            
+
+            
+function printQuestions3(){
+  for (d=0;d<JsQuestion.length;d++)
+  {
 
               document.querySelector("#displayjscards").innerHTML += 
                 '<section class="flip-container"' +'>' +
@@ -58,11 +76,19 @@ document.querySelector("#displayhtmlcards").innerHTML +=
                   '</section>' +
               '</section> ';
 
-               
+            }
+            d=0;
+            }
 
-}
-d=0;
-}
+            function printAll(){
+            
+              printQuestions()
+              printQuestions2()
+              printQuestions3()
+          
+            }
+  
+            
 
 // function printAnswer(){
 //   for (i=0;i<HtmlAnswer.length;i++)
@@ -104,13 +130,5 @@ d=0;
           
 //           }
 
-          // function printAll(){
-            
-          //   // printQuestions2()
-          //   // printQuestions3()
-          //   // printAnswer();
-          //   // printAnswer2();
-          //   // printAnswer3();
-          // }
-
+          
 
