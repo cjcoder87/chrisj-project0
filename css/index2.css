@@ -26,7 +26,7 @@ display: inline-block;
 width: 30px;
 
 }
-#card1, .flashcard2 p{
+#card1, #card2, .flashcard2 p{
   text-align: center;
 }
 select.btn{
@@ -56,6 +56,11 @@ select.btn{
   overflow: auto;
   overflow-x: hidden;
 }
+
+#displaycards h3{
+  margin-top:52px;
+}
+
 body{
   background-color: #dbeae9;
 }
@@ -216,12 +221,18 @@ background-color: #84aaff;
   background-image: url('../images/index3.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-color: blanchedalmond;
   padding:15px 30px;
   display: none;
 
 
 }
+
+#displaycards{
+  background: linear-gradient(to bottom right, #C3CFFF, #9CA6CC);
+
+}
+
+
 form input{
   margin-top: 0;
 }
@@ -233,7 +244,7 @@ select{
  float: right;
 }
 
-#addCard p, #updateCard p, #deleteCard p, #studyDirections p, #displaycards p{
+#addCard p, #updateCard p, #deleteCard p, #studyDirections p{
   font-size: 1.5rem;
   cursor: pointer;
   margin: 15px;
@@ -299,7 +310,7 @@ select{
   height: 100%;
 }
 
-.flip-container {
+.flip-container, .flip-container2 {
   -webkit-perspective: 1000;
 	perspective: 1000px;
 }
@@ -488,6 +499,7 @@ footer h3{
         width: 60%;
         float: right;
     background-color: initial;   
+    margin-right: 150px;
       }
 
       section.col-md-3 ul li{
@@ -528,7 +540,7 @@ footer h3{
   @media only screen and (max-width: 680px) {
     section.col-md-3 ul{
       margin-top: 100px;
-      margin-right: 50px;
+      margin-right: 80px;
     }
     footer.row{
       margin-top: 600px;
@@ -559,7 +571,7 @@ footer h3{
         .jumbotron h1{
           font-size: 2.5rem;
         }
-        .flip-container, .front, .back{
+        .flip-container,  .front, .back{
           width: 95%;
         }
 

@@ -13,11 +13,8 @@ function closeAll(){
   document.querySelector('#updateSpan').style.display='none';
   document.querySelector('#deleteSpan').style.display='none';
   document.querySelector('#displayhtmlcards').innerHTML='';
-  document.querySelector('#displayhtmlcardsa').innerHTML='';
   document.querySelector('#displaycsscards').innerHTML='';
-  document.querySelector('#displaycsscardsa').innerHTML='';
   document.querySelector('#displayjscards').innerHTML='';
-  document.querySelector('#displayjscardsa').innerHTML='';
   document.querySelector('.statusmessage').style.display='none';
   document.querySelector('#pickSubject').value = "Pick a Subject";
 

@@ -113,30 +113,17 @@
                       <p class="pull-right" onclick="closeAll()">X</p>
                       <h2>Cards</h2>
                       <h3>Html Questions</h3>
-                      <ol id="displayhtmlcards">
-                        </ol>
-                      <h3>Html Answers</h3>
+                      <section id="displayhtmlcards">
+                      </section>
 
-                        <ol id="displayhtmlcardsa">
-                          </ol>
                       <h3>CSS Questions</h3>
-
-                        <ol id="displaycsscards">
-                          </ol>
-                      <h3>CSS Answers</h3>
-
-                          <ol id="displaycsscardsa">
-                            </ol>
+                        <section id="displaycsscards">
+                          </section>
 
                       <h3>JS Questions</h3>
 
-                          <ol id="displayjscards">
-                            </ol>
-
-                      <h3>JS Answers</h3>
-
-                            <ol id="displayjscardsa">
-                              </ol>
+                          <section id="displayjscards">
+                            </section>
                       
 
             </section>
@@ -186,7 +173,7 @@
                   <li id="plus" onclick="showadd()"><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
                   <li id="wrench" onclick="showupdate()"><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
                   <li id="trash" onclick="showdelete()"><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
-                  <li id="eye" onclick="printAll();showcards();"><i class="fas fa-eye">&nbsp;&nbsp;&nbsp;&nbsp;Show Cards</i></li>
+                  <li id="eye" onclick="printQuestions();showcards();"><i class="fas fa-eye">&nbsp;&nbsp;&nbsp;&nbsp;Show Cards</i></li>
                   
                 </ul>
           </section>
@@ -233,6 +220,7 @@
   <script src="script/transition.js"></script>
   <script src="script/update.js"></script>
   <script src="script/delete.js"></script>
+  <script src="script/flip.js"></script>
 
 
 
