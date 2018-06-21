@@ -1,9 +1,9 @@
 // var check = 0;
 // var check2 = 0;
-// $(function() {
-// $('.front').click(function() {
-// $('.flip-container').toggleClass('flip');
-// });
+$(document).ready(function(){
+$('.front').click(function() {
+$('.flip-container').toggleClass('flip');
+});
 
 // $('.front').mouseover(function() {
 // if(check % 2 == 0){
@@ -27,4 +27,4 @@
 // });
 // Picture Flip http://jsfiddle.net/YaUPs/
 
-// }); // ready function Close tag
+}); // ready function Close tag

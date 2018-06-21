@@ -1,6 +1,36 @@
 $(document).ready(function(){
 //Called by id 
+function checkupdate(){
+  if(document.querySelector('#updateQuestion').value ==""){
+    document.querySelector('#failupdate').innerHTML = 'Type a Question to Update';
+
+    document.querySelector('#failupdate').style.display = 'block';
+  document.querySelector('#updateSpan').style.display = "none";
+
+
+  }
+  if(document.querySelector('#updateAnswer').value ==""){
+    document.querySelector('#failupdate2').innerHTML = 'Type a Question to Update';
+
+    document.querySelector('#failupdate2').style.display = 'block';
+  document.querySelector('#updateSpan').style.display = "none";
+
+  
+
+  }
+
+  if(document.querySelector('#updateQuestion').value !== ""){
+    document.querySelector('#failupdate').style.display = 'none';
+  }
+
+  if(document.querySelector('#updateAnswer').value !== ""){
+    document.querySelector('#failupdate2').style.display = 'none';
+  }
+}
+
+
 $("#wrench").click(function(){
+
 if($("#htmllink").hasClass("active")){
   document.querySelector('#updateQuestion').value = HtmlQuestion[i]; 
   document.querySelector('#updateAnswer').value = HtmlAnswer[i];
@@ -22,6 +52,13 @@ if($("#csslink").hasClass("active")){
 });
 
 $("#updateButton").click(function(){
+  checkupdate();
+
+ 
+  if(document.querySelector('#updateQuestion').value !== "" && document.querySelector('#updateAnswer').value !==""){
+    document.querySelector('#failupdate2').style.display = 'none';
+    document.querySelector('#failupdate').style.display = 'none';
+  
   if($("#htmllink").hasClass("active")){
   HtmlQuestion[i] = document.querySelector('#updateQuestion').value;
   HtmlAnswer[i] = document.querySelector('#updateAnswer').value;
@@ -55,7 +92,7 @@ if($("#csslink").hasClass("active")){
   }
 
 
-
+}
 
 });
 

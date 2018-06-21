@@ -50,11 +50,17 @@ select.btn{
   margin: 0;
 
 }
-#updateSpan{
-  color: blue;
+#updateSpan, #failupdate, #failupdate2{
+  
   display: none;
   font-size: .8em;
   margin: 0;
+}
+#updateSpan{
+  color: blue;
+}
+#failupdate, #failupdate2{
+  color: red;
 }
 
 #displaycards, #studyDirections, #updateCard, #deleteCard{
@@ -235,6 +241,7 @@ background-color: #84aaff;
 #displaycards{
   background: linear-gradient(to bottom right, #C3CFFF, #9CA6CC);
 width: 70vw;
+height: 130%;
 }
 
 

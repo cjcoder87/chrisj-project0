@@ -1,0 +1,23 @@
+{
+  "name": "project0",
+  "version": "1.0.0",
+  "description": "This is a site that has flash cards for study.",
+  "main": "./script/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./script/index.js && node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjcoder87/chrisj-project0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjcoder87/chrisj-project0/issues"
+  },
+  "homepage": "https://github.com/cjcoder87/chrisj-project0#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
