@@ -7,7 +7,6 @@ function checkupdate(){
     document.querySelector('#failupdate').style.display = 'block';
   document.querySelector('#updateSpan').style.display = "none";
 
-
   }
   if(document.querySelector('#updateAnswer').value ==""){
     document.querySelector('#failupdate2').innerHTML = 'Type a Question to Update';
@@ -26,6 +25,8 @@ function checkupdate(){
   if(document.querySelector('#updateAnswer').value !== ""){
     document.querySelector('#failupdate2').style.display = 'none';
   }
+
+  console.log('update validation');
 }
 
 
