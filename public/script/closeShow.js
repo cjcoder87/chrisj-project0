@@ -1,5 +1,4 @@
-document.querySelector("#card1").innerHTML = HtmlQuestion[0];
-
+//Reset everything after close
 function closeAll(){
   document.querySelector('#addCard').style.display='none';
   document.querySelector('#updateCard').style.display='none';
@@ -17,10 +16,8 @@ function closeAll(){
   document.querySelector('#displayjscards').innerHTML='';
   document.querySelector('.statusmessage').style.display='none';
   document.querySelector('#pickSubject').value = "Pick a Subject";
-
 }
-
-
+//the following shows the different sections according to the link presses(add, delete, show cards)
 function showadd(){
   document.querySelector('#addCard').style.display="block";
   document.querySelector('#filter').style.display='block';
@@ -37,7 +34,6 @@ function showcards(){
   document.querySelector('#displaycards').style.display='block';
   document.querySelector('#filter').style.display='block';
 }
-
 function study(){
   document.querySelector('#filter').style.display='block';
   document.querySelector('#studyDirections').style.display='block';

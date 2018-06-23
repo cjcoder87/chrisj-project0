@@ -1,187 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/index2.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="script/create.js"></script>
 
 
   <title>The Devs Study Guide</title>
 </head>
+
 <body class="container-fluid">
   <section id="filter" onclick="closeAll()"></section>
-    <header class="row jumbotron">
-<nav class="row">
-  <section class="col-md-12">
-    <h1>The Developer's Study Guide</h1>
-  </section>
+  <header class="row jumbotron">
+    <nav class="row">
+      <section class="col-md-12">
+        <h1>The Developer's Study Guide</h1>
+      </section>
 
-  <section class="col-md-12">
-     <p class="pull-right btn btn-primary" onclick="study()" id="directions">How to Study</p>
-    </section>
- 
-</nav>
-  
+      <section class="col-md-12">
+        <p class="pull-right btn btn-primary" onclick="study()" id="directions">How to Study</p>
+      </section>
+
+    </nav>
+
 
   </header>
 
   <main class="row">
 
-          <section id="subject" class="col-md-3">
-              <h2>Subjects</h2>
-              <ol id="subjects">
-                <li id="htmllink" class="active" onclick="switchHtmlSlider()">HTML</li>
-                <li id="csslink" onclick="switchCssSlider()"> CSS</li>
-                <li id="jslink" onclick="switchJsSlider()">JS</li>
-              </ol>
-          </section>
-          <section id="flipping" class="col-md-6">
-<!-- 
+    <section id="subject" class="col-md-3">
+      <h2>Subjects</h2>
+      <ol id="subjects">
+        <li id="htmllink" class="active" onclick="switchHtmlSlider()">HTML</li>
+        <li id="csslink" onclick="switchCssSlider()"> CSS</li>
+        <li id="jslink" onclick="switchJsSlider()">JS</li>
+      </ol>
+    </section>
+    <section id="flipping" class="col-md-6">
+      <!-- 
               <button id="handle">Fade</button> 
               <div id="slideSource">Whatever you want here - images or text</div> -->
 
-            <section id="addCard">
-              <p class="pull-right close" onclick="closeAll()">X</p>
-              <h2>Add</h2>
-              <span id="failmessage">Choose a Subject.</span>
-              <span class="statusmessage">You Have added a Card.</span>
-              
-              <form action="">
-                  
+      <section id="addCard">
+        <p class="pull-right close" onclick="closeAll()">X</p>
+        <h2>Add</h2>
+        <span id="failmessage">Choose a Subject.</span>
+        <span class="statusmessage">You Have added a Card.</span>
 
-                <select name="subjects" id="pickSubject" class="btn btn-success dropdown-toggle">
-                    <option id="pick" value="Pick a Subject" disabled selected>Pick a Subject</option>
+        <form action="">
+          <select name="subjects" id="pickSubject" class="btn btn-success dropdown-toggle">
+            <option id="pick" value="Pick a Subject" disabled selected>Pick a Subject</option>
+            <option id="html" value="HTML">HTML</option>
+            <option id="css" value="CSS">CSS</option>
+            <option id="js" value="JS">JS</option>
+          </select>
+          <!-- <input id="varname" type="text" value="" hidden> -->
+          <span id="failmessage2">Write a Question.</span>
 
-                  <option id="html" value="HTML">HTML</option>
-                  <option id="css" value="CSS">CSS</option>
-                  <option id="js" value="JS">JS</option>
-                </select>
-                <!-- <input id="varname" type="text" value="" hidden> -->
-                <span id="failmessage2">Write a Question.</span>
-             
-                <input id="addQuestion" type="text" placeholder="Question">
-                <span id="failmessage3">Write an Answer.</span>
-                <input id="addAnswer" type="text" placeholder="Answer">
-                <button type="button"class="btn btn-lg btn-success" onclick="addcards();">Add</button>
-              </form>
-            </section>
-            <section id="updateCard">
-              <p class="pull-right close" onclick="closeAll()">X</p>
-              <h2>Update</h2>
-              <form action="">
-                  <!-- <input type="text" value="Name of Index Card" readonly>
-                <select name="subjectmatterquestions" id="subjectmatterquestions">
-                  <option selected value="Select a Question">Select a Question</option>
-                </select>
-                <select name="subjectmatteranswers" id="subjectmatteranswers">
-                    <option value="Select an Answer" selected>Select an Answer</option>
-                  
-                  </select>
-                  
-                  <label for="htmlradio">HTML</label>
-                <input name="update" id="htmlradio" type="radio" value="HTML" onchange="">
-                <label for="cssradio">CSS</label>
-                <input name="update" id="cssradio" type="radio" value="CSS" onchange="">
-                <label for="jsradio">JS</label>
-                <input name="update" id="jsradio" type="radio" value="JS" onchange=""> -->
-                  
-                  <span id="updateSpan"></span>
-                  <span id="failupdate"></span>
-                  <input id="updateQuestion" type="text" placeholder="Update Question">
-                  <span id="failupdate2"></span>
+          <input id="addQuestion" type="text" placeholder="Question">
+          <span id="failmessage3">Write an Answer.</span>
+          <input id="addAnswer" type="text" placeholder="Answer">
+          <button type="button" class="btn btn-lg btn-success" onclick="addcards();">Add</button>
+        </form>
+      </section>
+      <section id="updateCard">
+        <p class="pull-right close" onclick="closeAll()">X</p>
+        <h2>Update</h2>
+        <form action="">
 
-                  <input id="updateAnswer" type="text" placeholder="Update Answer">
-                  <button id="updateButton" type="button"class="btn btn-lg btn-primary">Update</button>
-                </form>
+          <span id="updateSpan"></span>
+          <span id="failupdate"></span>
+          <input id="updateQuestion" type="text" placeholder="Update Question">
+          <span id="failupdate2"></span>
 
-            </section>
+          <input id="updateAnswer" type="text" placeholder="Update Answer">
+          <button id="updateButton" type="button" class="btn btn-lg btn-primary">Update</button>
+        </form>
 
-            <section id="deleteCard">
-              <p class="pull-right close" onclick="closeAll()">X</p>
-              <h2>Delete</h2>
-              <form action="">
-                  <span id="deleteSpan"></span>
+      </section>
 
-                  <input id="deleteQuestion" type="text" readonly>
-                  <input id="deleteAnswer" type="text" readonly>
-                  <button type="button" id="deleteButton" class="btn btn-lg btn-danger">Delete</button>
+      <section id="deleteCard">
+        <p class="pull-right close" onclick="closeAll()">X</p>
+        <h2>Delete</h2>
+        <form action="">
+          <span id="deleteSpan"></span>
 
-              </section>
-                  <section id="displaycards">
-                      <p class="pull-right close" onclick="closeAll()">X</p>
-                      <!-- <h2>Cards</h2> -->
-                      <h3 class="well">Html Questions</h3>
-                      <section id="displayhtmlcards">
-                      </section>
+          <input id="deleteQuestion" type="text" readonly>
+          <input id="deleteAnswer" type="text" readonly>
+          <button type="button" id="deleteButton" class="btn btn-lg btn-danger">Delete</button>
 
-                      <h3 class="well">CSS Questions</h3>
-                        <section id="displaycsscards">
-                          </section>
+      </section>
+      <section id="displaycards">
+        <p class="pull-right close" onclick="closeAll()">X</p>
+        <!-- <h2>Cards</h2> -->
+        <h3 class="well">Html Questions</h3>
+        <section id="displayhtmlcards">
+        </section>
 
-                      <h3 class="well">JS Questions</h3>
+        <h3 class="well">CSS Questions</h3>
+        <section id="displaycsscards">
+        </section>
 
-                          <section id="displayjscards">
-                            </section>
-                      
+        <h3 class="well">JS Questions</h3>
 
-            </section>
+        <section id="displayjscards">
+        </section>
 
-            <section id="studyDirections">
-                <p class="pull-right" onclick="closeAll()">X</p>
-                <h2>How to Study</h2>
-                <h3>Overview</h3>
-                <p>Hover over the index card to see the answer.</p>
-                <h3>Slider</h3>
-                <p>The left and right allow you to swap between the index cards in the respective direction of the slider arrows.</p>
 
-                <h3>Add Card</h3>
-                <p>This allows you to add a new index card. You must select a subject followed by writing a question and answer. Click the add button to add them to the </p>
-                <h3>Update Card</h3>
-                <p>This allows you to modify currently existing index cards by clecking the update button.</p>
-                <h3>Delete Card</h3>
-                <p>This allows you to delete currently existing index cards by clicking the delete button.</p>
-                <h3>Show Cards</h3>
-                <p>This shows you the entire deck of questions created.</p>
-                
-             
+      </section>
 
-            </section>
+      <section id="studyDirections">
+        <p class="pull-right" onclick="closeAll()">X</p>
+        <h2>How to Study</h2>
+        <h3>Overview</h3>
+        <p>Hover over the index card to see the answer.</p>
+        <h3>Slider</h3>
+        <p>The left and right allow you to swap between the index cards in the respective direction of the slider arrows.</p>
 
-            <!-- Flipping Card -->
-              <section class="flip-container" ontouchstart="this.classList.toggle('hover')"> <!-- fl_container -->
-                  <section class="flipper">  <!-- fl card shadow -->
-                      <section class="front flashcard">
-                        <p id="card1"> </p>
-                      </section>   <!--  front face end -->
-                      <section class="back flashcard2">
-                        <p></p>
-                      </section> <!-- End of Flash Card2 --> 
-                  </section> <!-- End of flipper -->
-               </section> <!-- End of flip-container -->
-               <section id="htmlleft" class="leftHolder pull-left" onclick="leftHTML();"><p>&lt;</p></section>
-               <section id="htmlright" class="rightHolder pull-right" onclick="rightHTML();"><p>&gt;</p></section>
-               <section id="cssleft" class="leftHolder pull-left" onclick="leftCSS();"><p>&lt;</p></section>
-               <section id="cssright" class="rightHolder pull-right" onclick="rightCSS();"><p>&gt;</p></section>
-               <section id="jsleft" class="leftHolder pull-left" onclick="leftJS();"><p>&lt;</p></section>
-               <section id="jsright" class="rightHolder pull-right" onclick="rightJS();"><p>&gt;</p></section>
-              </section> <!--End of section col -->
+        <h3>Add Card</h3>
+        <p>This allows you to add a new index card. You must select a subject followed by writing a question and answer. Click
+          the add button to add them to the </p>
+        <h3>Update Card</h3>
+        <p>This allows you to modify currently existing index cards by clecking the update button.</p>
+        <h3>Delete Card</h3>
+        <p>This allows you to delete currently existing index cards by clicking the delete button.</p>
+        <h3>Show Cards</h3>
+        <p>This shows you the entire deck of questions created.</p>
 
-          <section class="col-md-3 add">
-              <ul id="cardModify">
-                  <li id="plus" onclick="showadd()"><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
-                  <li id="wrench" onclick="showupdate()"><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
-                  <li id="trash" onclick="showdelete()"><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
-                  <li id="eye" onclick="printAll();showcards();"><i class="fas fa-eye">&nbsp;&nbsp;&nbsp;&nbsp;Show Cards</i></li>
-                  
-                </ul>
+
+
+      </section>
+
+      <!-- Flipping Card -->
+      <section class="flip-container" ontouchstart="this.classList.toggle('hover')">
+        <!-- fl_container -->
+        <section class="flipper">
+          <!-- fl card shadow -->
+          <section class="front flashcard">
+            <p id="card1"> </p>
           </section>
+          <!--  front face end -->
+          <section class="back flashcard2">
+            <p></p>
+          </section>
+          <!-- End of Flash Card2 -->
+        </section>
+        <!-- End of flipper -->
+      </section>
+      <!-- End of flip-container -->
+      <section id="htmlleft" class="leftHolder pull-left" onclick="leftHTML();">
+        <p>&lt;</p>
+      </section>
+      <section id="htmlright" class="rightHolder pull-right" onclick="rightHTML();">
+        <p>&gt;</p>
+      </section>
+      <section id="cssleft" class="leftHolder pull-left" onclick="leftCSS();">
+        <p>&lt;</p>
+      </section>
+      <section id="cssright" class="rightHolder pull-right" onclick="rightCSS();">
+        <p>&gt;</p>
+      </section>
+      <section id="jsleft" class="leftHolder pull-left" onclick="leftJS();">
+        <p>&lt;</p>
+      </section>
+      <section id="jsright" class="rightHolder pull-right" onclick="rightJS();">
+        <p>&gt;</p>
+      </section>
+    </section>
+    <!--End of section col -->
 
-          <!-- <section class="col-md-12">
+    <section class="col-md-3 add">
+      <ul id="cardModify">
+        <li id="plus" onclick="showadd()">
+          <i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i>
+        </li>
+        <li id="wrench" onclick="showupdate()">
+          <i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i>
+        </li>
+        <li id="trash" onclick="showdelete()">
+          <i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i>
+        </li>
+        <li id="eye" onclick="printAll();showcards();">
+          <i class="fas fa-eye">&nbsp;&nbsp;&nbsp;&nbsp;Show Cards</i>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- <section class="col-md-12">
              <ul>
                   <li><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
                   <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
@@ -189,47 +201,69 @@
             
                 </ul>
           </section> -->
-     
+
   </main>
 
   <footer class="row">
     <section class="col-md-6">
-        <h3>Social Media</h3>
-        <ul id="social">
-        <li><a target="_blank" href="https://www.facebook.com"> <i class="fab fa-facebook-square fa-3x"></i></a></li>
-        <li><a target="_blank" href="https://www.instagram.com"><i class="fab fa-instagram fa-3x"></i></a></li>
-        <li><a target="_blank" href="https://www.twitter.com"><i class="fab fa-twitter-square fa-3x"></i></a></li>
+      <h3>Social Media</h3>
+      <ul id="social">
+        <li>
+          <a target="_blank" href="https://www.facebook.com">
+            <i class="fab fa-facebook-square fa-3x"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.instagram.com">
+            <i class="fab fa-instagram fa-3x"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.twitter.com">
+            <i class="fab fa-twitter-square fa-3x"></i>
+          </a>
+        </li>
       </ul>
 
     </section>
     <section class="col-md-6 pull-right">
-      
-     <p>The Developer's Study Guide was designed to help beginning developers learn the basic concepts of HTML, CSS, and JavaScript.</p> <p></p> Do not use this site as your only reference to study. By no means is this everything you will need to learn to be succesful in your career.</p> <p> Please use the <a target="_blank" href="https://developer.mozilla.org/en-US/">Mozilla Developer Network(MDN)</a>  because they have full documentation on all subjects.</p>
-     <p>&copy; 2018 By Christopher Jackson All Rights Reserved</p>
 
-     <a href="https://www.apple.com/ios/app-store/" target="_blank"> <img class="appstore" src="images/appstore.svg" alt="Download from AppStore"></a>
-     <a href="https://play.google.com/store?hl=en" target=_blank><img class="play" src="images/play.png" alt="Download from Google Play"></a>
+      <p>The Developer's Study Guide was designed to help beginning developers learn the basic concepts of HTML, CSS, and JavaScript.</p>
+      <p></p> Do not use this site as your only reference to study. By no means is this everything you will need to learn to
+      be succesful in your career.</p>
+      <p> Please use the
+        <a target="_blank" href="https://developer.mozilla.org/en-US/">Mozilla Developer Network(MDN)</a> because they have full documentation on all subjects.</p>
+      <p>&copy; 2018 By Christopher Jackson All Rights Reserved</p>
 
-  </section>
+      <a href="https://www.apple.com/ios/app-store/" target="_blank">
+        <img class="appstore" src="images/appstore.svg" alt="Download from AppStore">
+      </a>
+      <a href="https://play.google.com/store?hl=en" target=_blank>
+        <img class="play" src="images/play.png" alt="Download from Google Play">
+      </a>
+
+    </section>
 
 
 
   </footer>
-  <script src="script/script2.js"></script>
-  <script src="script/placement.js"></script>
+  <script src="script/create.js"></script>
+  <script src="script/print.js"></script>
   <script src="script/add.js"></script>
-  <script src="script/modify.js"></script>
-  <script src="script/switch.js"></script>
-  <script src="script/transition.js"></script>
+  <script src="script/closeShow.js"></script>
+  <script src="script/transitionfade.js"></script>
   <script src="script/update.js"></script>
   <script src="script/delete.js"></script>
- <script src="script/script.js"></script> 
+  <script src="script/switch.js"></script>
 
 
 
 
 
 
-  
+
+
+
 </body>
+
 </html>
