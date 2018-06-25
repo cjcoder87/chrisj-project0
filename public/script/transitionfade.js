@@ -6,6 +6,5 @@ $(document).ready(function () {
     $(".flip-container").fadeIn(400);
     $(".flashcard2 p").fadeIn(400);
     $("#card1").delay(500).fadeIn(400);
-
   });
 });

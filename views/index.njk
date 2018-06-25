@@ -1,8 +1,6 @@
 {% block page %}
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,35 +12,28 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>The Devs Study Guide</title>
 </head>
-
 <body>
 
-<section class="container-fluid">
-
-  <section id="filter" onclick="closeAll()"></section>
-  
-
+  <section class="container-fluid">
+    <section id="filter" onclick="closeAll()"></section>
+{# header below #}
  {% block header %}
 <header class="row jumbotron">
     <nav class="row">
       <section class="col-md-12">
         <h1>The Developer's Study Guide</h1>
       </section>
-
       <section class="col-md-12">
         <p class="pull-right btn btn-primary" onclick="study()" id="directions">How to Study</p>
-        <p class="pull-left btn btn-danger" id="nuclear">Delete Created Cards</p>
       </section>
-
     </nav>
-
   </header>
   {% endblock %}
   {# End of Header Block #}
 
 {% block main %}
  <main class="row">
-{# put links around the list content #}
+{# Subjects Section #}
     <section id="subject" class="col-md-3">
       <h2>Subjects</h2>
       <ol id="subjects">
@@ -51,14 +42,13 @@
         <a id="jslink" href="/js"><li>JS</li></a>
       </ol>
     </section>
-
+{# Add Form #}
     <section id="flipping" class="col-md-6">
       <section id="addCard">
         <p class="pull-right close" onclick="closeAll()">X</p>
         <h2>Add</h2>
         <span id="failmessage">Choose a Subject.</span>
         <span class="statusmessage">You Have added a Card.</span>
-
         <form action="">
           <select name="subjects" id="pickSubject" class="btn btn-success dropdown-toggle">
             <option id="pick" value="Pick a Subject" disabled selected>Pick a Subject</option>
@@ -66,9 +56,7 @@
             <option id="css" value="CSS">CSS</option>
             <option id="js" value="JS">JS</option>
           </select>
-        
           <span id="failmessage2">Write a Question.</span>
-
           <input id="addQuestion" type="text" placeholder="Question">
           <span id="failmessage3">Write an Answer.</span>
           <input id="addAnswer" type="text" placeholder="Answer">
@@ -76,52 +64,47 @@
         </form>
       </section>
 
+        {# Update Form #}
       <section id="updateCard">
         <p class="pull-right close" onclick="closeAll()">X</p>
         <h2>Update</h2>
         <form action="">
-
           <span id="updateSpan"></span>
           <span id="failupdate"></span>
           <input id="updateQuestion" type="text" placeholder="Update Question">
           <span id="failupdate2"></span>
-
           <input id="updateAnswer" type="text" placeholder="Update Answer">
           <button id="updateButton" type="button" class="btn btn-lg btn-primary">Update</button>
         </form>
-
       </section>
 
+        {# Delete Form #}
       <section id="deleteCard">
         <p class="pull-right close" onclick="closeAll()">X</p>
         <h2>Delete</h2>
         <form action="">
           <span id="deleteSpan"></span>
-
           <input id="deleteQuestion" type="text" readonly>
           <input id="deleteAnswer" type="text" readonly>
+          <button class="btn btn-lg btn-danger" id="nuclear">Delete All</button>
           <button type="button" id="deleteButton" class="btn btn-lg btn-danger">Delete</button>
-
       </section>
 
+      {# Display All Cards #}
       <section id="displaycards">
         <p class="pull-right close" onclick="closeAll()">X</p>
-        
         <h3 class="well">Html Questions</h3>
         <section id="displayhtmlcards">
         </section>
-
         <h3 class="well">CSS Questions</h3>
         <section id="displaycsscards">
         </section>
-
         <h3 class="well">JS Questions</h3>
         <section id="displayjscards">
         </section>
-
-
       </section>
 
+      {# How to section #}
       <section id="studyDirections">
         <p class="pull-right" onclick="closeAll()">X</p>
         <h2>How to Study</h2>
@@ -129,7 +112,6 @@
         <p>Hover over the index card to see the answer.</p>
         <h3>Slider</h3>
         <p>The left and right allow you to swap between the index cards in the respective direction of the slider arrows.</p>
-
         <h3>Add Card</h3>
         <p>This allows you to add a new index card. You must select a subject followed by writing a question and answer. Click
           the add button to add them to the </p>
@@ -139,26 +121,38 @@
         <p>This allows you to delete currently existing index cards by clicking the delete button.</p>
         <h3>Show Cards</h3>
         <p>This shows you the entire deck of questions created.</p>
-
      </section>
-     <p id="cardstatus"></p>
+
+     {# Displays current flash card number #}
+      {% block cards %}
+     <p id="cardstatus" class="htmlcstatus"></p>
+     {% endblock %}
+
+     {# Index Card Area #}
       <!-- Flipping Card -->
       <section class="flip-container" ontouchstart="this.classList.toggle('hover')">
         <!-- fl_container -->
         <section class="flipper">
           <!-- fl card shadow -->
+          {% block frontcard %}
           <section class="front flashcard">
             <p id="card1"> </p>
           </section>
+          {% endblock %}
+
           <!--  front face end -->
+          {% block backcard %}
           <section class="back flashcard2">
             <p></p>
           </section>
+          {% endblock %}
           <!-- End of Flash Card2 -->
         </section>
         <!-- End of flipper -->
       </section>
       <!-- End of flip-container -->
+
+      {# Sliders #}
       {% block arrows %}
       <section id="htmlleft" class="leftHolder pull-left" onclick="leftHTML()">
         <p>&lt;</p>
@@ -166,14 +160,12 @@
       <section id="htmlright" class="rightHolder pull-right" onclick="rightHTML()">
         <p>&gt;</p>
       </section>
-      
-     
       {% endblock %}
-
 
     </section>
     <!--End of section col -->
 
+{# CRUD Selectors #}
     <section class="col-md-3 add">
       <ul id="cardModify">
         <li id="plus" onclick="showadd()">
@@ -188,11 +180,9 @@
         <li id="eye" onclick="printAll();showcards();">
           <i class="fas fa-eye">&nbsp;&nbsp;&nbsp;&nbsp;Show Cards</i>
         </li>
-
       </ul>
     </section>
   </main>
-
  {% endblock %} 
 {# End of block main #}
 
@@ -217,40 +207,30 @@
           </a>
         </li>
       </ul>
-
     </section>
     <section class="col-md-6 pull-right">
-
       <p>The Developer's Study Guide was designed to help beginning developers learn the basic concepts of HTML, CSS, and JavaScript.</p>
       <p></p> Do not use this site as your only reference to study. By no means is this everything you will need to learn to
       be succesful in your career.</p>
       <p> Please use the
         <a target="_blank" href="https://developer.mozilla.org/en-US/">Mozilla Developer Network(MDN)</a> because they have full documentation on all subjects.</p>
       <p>&copy; 2018 By Christopher Jackson All Rights Reserved</p>
-
       <a href="https://www.apple.com/ios/app-store/" target="_blank">
         <img class="appstore" src="images/appstore.svg" alt="Download from AppStore">
       </a>
       <a href="https://play.google.com/store?hl=en" target=_blank>
         <img class="play" src="images/play.png" alt="Download from Google Play">
       </a>
-
     </section>
- 
-
-  
-
-
 </section>
   </footer>
  
 {% endblock %}
 {# End of block footer#}
-  
 
   {% block scripts %}
   <script src="script/create.js"></script>
-  <script src="script/lives.js"></script>
+  <script src="script/store.js"></script>
   <script src="script/print.js"></script>
   <script src="script/add.js"></script>
   <script src="script/closeShow.js"></script>
@@ -259,7 +239,7 @@
   <script src="script/delete.js"></script>
   <script src="script/switch.js"></script>
  {% endblock %}
-</body>
 
+</body>
 </html>
 {% endblock %}

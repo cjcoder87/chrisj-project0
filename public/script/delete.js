@@ -20,7 +20,7 @@ $(document).ready(function () {
     }
 
   });
-//
+  //
   $("#deleteButton").click(function () {
     // initailizes the variiable to the array index currently being displayed
     var index = HtmlQuestion.indexOf(i);
@@ -30,12 +30,12 @@ $(document).ready(function () {
     var index5 = CssQuestion.indexOf(k);
     var index6 = CssAnswer.indexOf(k);
 
-//Checks element that has actie class
+    //Checks element that has actie class
     if ($("#htmllink li").hasClass("active")) {
       //Preventitive Condition for deleting the default card
 
       if (i <= 0) {
-        document.querySelector('#deleteSpan').innerHTML = "You can't delete the last HTML index Card";
+        document.querySelector('#deleteSpan').innerHTML = "You can't delete the default HTML index Card";
         document.querySelector('#deleteSpan').style.display = "block";
 
       }
@@ -61,7 +61,7 @@ $(document).ready(function () {
 
     if ($("#csslink li").hasClass("active")) {
       if (j <= 0) {
-        document.querySelector('#deleteSpan').innerHTML = "You can't delete the last CSS index Card";
+        document.querySelector('#deleteSpan').innerHTML = "You can't delete the default CSS index Card";
         document.querySelector('#deleteSpan').style.display = "block";
       } else {
         CssQuestion.splice(index3, 1);
@@ -74,8 +74,8 @@ $(document).ready(function () {
         j--;
         document.querySelector('#card1').innerHTML = CssQuestion[j];
         document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
-       CssLives();
-       CssStatus();
+        CssLives();
+        CssStatus();
         console.log('Css delete accomplished');
 
       }
@@ -83,7 +83,7 @@ $(document).ready(function () {
 
     if ($("#jslink li").hasClass("active")) {
       if (k <= 0) {
-        document.querySelector('#deleteSpan').innerHTML = "You can't delete the last JS index Card";
+        document.querySelector('#deleteSpan').innerHTML = "You can't delete the default JS index Card";
         document.querySelector('#deleteSpan').style.display = "block";
       } else {
         JsQuestion.splice(index5, 1);
@@ -104,17 +104,16 @@ $(document).ready(function () {
     }
 
   });
-
-  $("#nuclear").click(function (){
+  //deletes all data entered into the array from local storage
+  $("#nuclear").click(function () {
     localStorage.clear("hquestions");
     localStorage.clear("hanswers");
     localStorage.clear("cquestions");
     localStorage.clear("canswers");
     localStorage.clear("jquestions");
     localStorage.clear("janswers");
-    window.location.href = '/';
-
-});
+    location.reload();
+  });
 
 });
   // End of Document Ready

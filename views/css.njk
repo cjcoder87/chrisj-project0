@@ -1,19 +1,37 @@
 {% extends 'index.njk' %}
- 
+
+{% block cards %}
+     <p id="cardstatus" class="csscstatus"></p>
+     {% endblock %}
+
+
+{% block frontcard %}
+          <section class="front flashcard frontcss">
+            <p id="card1"> </p>
+          </section>
+          {% endblock %}
+
+          <!--  front face end -->
+          {% block backcard %}
+          <section class="back flashcard2 backcss">
+            <p></p>
+          </section>
+          {% endblock %}
+
+
+ {# Sliders #}
  {% block arrows %}
- <section id="cssleft" class="leftHolder pull-left" onclick="leftCSS()">
+ <section id="cssleft" class="leftHolder pull-left cssleft" onclick="leftCSS()">
         <p>&lt;</p>
       </section>
-      <section id="cssright" class="rightHolder pull-right" onclick="rightCSS()">
+      <section id="cssright" class="rightHolder pull-right cssright" onclick="rightCSS()">
         <p>&gt;</p>
       </section>
   {% endblock %}
-
-
+ 
   {% block scripts %}
   <script src="script/createcss.js"></script>
-  <script src="script/lives.js"></script>
-
+  <script src="script/store.js"></script>
   <script src="script/print.js"></script>
   <script src="script/add.js"></script>
   <script src="script/closeShow.js"></script>
@@ -21,5 +39,4 @@
   <script src="script/update.js"></script>
   <script src="script/delete.js"></script>
   <script src="script/switch.js"></script>
-
  {% endblock %}

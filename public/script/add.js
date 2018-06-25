@@ -21,7 +21,7 @@ function addcards() {
   if (document.querySelector('#addAnswer').value !== "") {
     document.querySelector('#failmessage3').style.display = 'none';
   }
-
+  //clears all values in form
   function messages() {
     document.querySelector('#addQuestion').value = "";
     document.querySelector('#addAnswer').value = "";
@@ -32,9 +32,7 @@ function addcards() {
     document.querySelector('#pickSubject').value = "Pick a Subject";
   }
 
-
-
-  //HTML Card Add, pushes input value into the end of the array
+  //HTML Card Add, pushes input value into the end of the array, shows card updated, reload page if added to a different
   if (document.querySelector('#pickSubject').value == 'HTML' && (document.querySelector('#addQuestion').value !== "" || document.querySelector('#addQuestion').value !== "") && (document.querySelector('#addAnswer').value !== "" || document.querySelector('#addAnswer').value !== "")) {
     HtmlQuestion.push(document.querySelector('#addQuestion').value);
     HtmlAnswer.push(document.querySelector('#addAnswer').value);
@@ -50,9 +48,8 @@ function addcards() {
       htmlStatus();
     }
 
-  }
+  }//CSS Card Add, pushes input value into the end of the array
 
-  //CSS Card Add, pushes input value into the end of the array
   if (document.querySelector('#pickSubject').value == 'CSS' && (document.querySelector('#addQuestion').value !== "" || document.querySelector('#addQuestion').value !== "") && (document.querySelector('#addAnswer').value !== "" || document.querySelector('#addAnswer').value !== "")) {
     CssQuestion.push(document.querySelector('#addQuestion').value);
     CssAnswer.push(document.querySelector('#addAnswer').value);
@@ -69,8 +66,6 @@ function addcards() {
     }
 
   }
-
-
   //JS Card Add, pushes input value into the end of the array
   if (document.querySelector('#pickSubject').value == 'JS' && (document.querySelector('#addQuestion').value !== "" || document.querySelector('#addQuestion').value !== "") && (document.querySelector('#addAnswer').value !== "" || document.querySelector('#addAnswer').value !== "")) {
     JsQuestion.push(document.querySelector('#addQuestion').value);
