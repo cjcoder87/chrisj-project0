@@ -6,6 +6,9 @@ var CssAnswer = ['Cascading Style Sheet'];
 var JsQuestion = ['What does JS stand for?'];
 var JsAnswer = ['JavaScript'];
 
+var i=0;
+
+
 
 // Checks to see if index cards are in local storage
 
@@ -22,6 +25,12 @@ if(JSON.parse(localStorage.getItem("hanswers")) != null){
 }else{
   console.log('Do Nothing');
 }
+
+function htmlStatus(){
+  document.querySelector("#cardstatus").innerHTML = 'HTML CARD ' + (i+1) + ' of' + " " + HtmlQuestion.length;
+  
+}
+htmlStatus();
 
 //Outputs value to front and back of index card
 document.querySelector("#card1").innerHTML = HtmlQuestion[0];

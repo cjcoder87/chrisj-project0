@@ -20,6 +20,8 @@ function rightHTML() {
     shift();
     document.querySelector('#card1').innerHTML = HtmlQuestion[i];
     document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
+    htmlStatus();
+
 
   }
 }
@@ -32,6 +34,8 @@ function leftHTML() {
     shift();
     document.querySelector('#card1').innerHTML = HtmlQuestion[i];
     document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
+    htmlStatus();
+
 
   }
 
@@ -45,6 +49,7 @@ function rightCSS() {
     shift();
     document.querySelector('#card1').innerHTML = CssQuestion[j];
     document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
+    CssStatus();
 
   }
 }
@@ -56,6 +61,7 @@ function leftCSS() {
     shift();
     document.querySelector('#card1').innerHTML = CssQuestion[j];
     document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
+    CssStatus();
 
   }
 }
@@ -68,6 +74,7 @@ function rightJS() {
     shift();
     document.querySelector('#card1').innerHTML = JsQuestion[k];
     document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
+    JsStatus();
 
   }
 
@@ -80,6 +87,8 @@ function leftJS() {
     shift();
     document.querySelector('#card1').innerHTML = JsQuestion[k];
     document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
+    JsStatus();
+
 
   }
 

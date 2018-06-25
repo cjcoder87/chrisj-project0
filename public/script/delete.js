@@ -52,6 +52,7 @@ $(document).ready(function () {
         document.querySelector('#card1').innerHTML = HtmlQuestion[i];
         document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
         htmlLives();
+        htmlStatus();
         console.log('HTML delete accomplished');
 
       }
@@ -74,6 +75,7 @@ $(document).ready(function () {
         document.querySelector('#card1').innerHTML = CssQuestion[j];
         document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
        CssLives();
+       CssStatus();
         console.log('Css delete accomplished');
 
       }
@@ -95,11 +97,24 @@ $(document).ready(function () {
         document.querySelector('#card1').innerHTML = JsQuestion[k];
         document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
         JsLives();
+        JsStatus();
         console.log('JS delete accomplished');
       }
 
     }
 
   });
+
+  $("#nuclear").click(function (){
+    localStorage.clear("hquestions");
+    localStorage.clear("hanswers");
+    localStorage.clear("cquestions");
+    localStorage.clear("canswers");
+    localStorage.clear("jquestions");
+    localStorage.clear("janswers");
+    window.location.href = '/';
+
+});
+
 });
   // End of Document Ready

@@ -1,15 +1,12 @@
-
-
-
-    //Arrays initialized
-
-    var HtmlQuestion = ['What does HTML stand for?'];
-    var HtmlAnswer = ['Hyper Text Markup Language'];
-    var CssQuestion = ['What does CSS stand for?'];
-    var CssAnswer = ['Cascading Style Sheet'];
-    var JsQuestion = ['What does JS stand for?'];
-    var JsAnswer = ['JavaScript'];
-
+//Arrays initialized
+var HtmlQuestion = ['What does HTML stand for?'];
+var HtmlAnswer = ['Hyper Text Markup Language'];
+var CssQuestion = ['What does CSS stand for?'];
+var CssAnswer = ['Cascading Style Sheet'];
+var JsQuestion = ['What does JS stand for?'];
+var JsAnswer = ['JavaScript'];
+    
+    var k=0;
     
     if(JSON.parse(localStorage.getItem("jquestions")) != null){
       JsQuestion = JSON.parse(localStorage.getItem("jquestions"))
@@ -24,6 +21,12 @@
     }else{
       console.log('Do Nothing');
     }
+
+    function JsStatus(){
+      document.querySelector("#cardstatus").innerHTML = 'JS CARD ' + (k+1) + ' of' + " " + JsQuestion.length;
+      
+    }
+    JsStatus();
 
 //Outputs value to front and back of index card
 document.querySelector("#card1").innerHTML = JsQuestion[0];

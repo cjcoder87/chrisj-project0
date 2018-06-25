@@ -22,7 +22,7 @@ function addcards() {
     document.querySelector('#failmessage3').style.display = 'none';
   }
 
-  function messages(){
+  function messages() {
     document.querySelector('#addQuestion').value = "";
     document.querySelector('#addAnswer').value = "";
     document.querySelector('.statusmessage').style.display = 'block';
@@ -34,20 +34,21 @@ function addcards() {
 
 
 
-//HTML Card Add, pushes input value into the end of the array
+  //HTML Card Add, pushes input value into the end of the array
   if (document.querySelector('#pickSubject').value == 'HTML' && (document.querySelector('#addQuestion').value !== "" || document.querySelector('#addQuestion').value !== "") && (document.querySelector('#addAnswer').value !== "" || document.querySelector('#addAnswer').value !== "")) {
     HtmlQuestion.push(document.querySelector('#addQuestion').value);
     HtmlAnswer.push(document.querySelector('#addAnswer').value);
     messages();
-    i = HtmlQuestion.length-1;
+    i = HtmlQuestion.length - 1;
     document.querySelector("#card1").innerHTML = HtmlQuestion[i];
-document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
-
-htmlLives();
-
-//...
-//  console.log(JSON.parse(localStorage.getItem("hquestions"))); 
-
+    document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
+    htmlLives();
+    if (window.location.pathname != '/') {
+      window.location.href = '/';
+    } else {
+      console.log('on same page');
+      htmlStatus();
+    }
 
   }
 
@@ -56,22 +57,36 @@ htmlLives();
     CssQuestion.push(document.querySelector('#addQuestion').value);
     CssAnswer.push(document.querySelector('#addAnswer').value);
     messages();
-    j = CssQuestion.length-1;
+    j = CssQuestion.length - 1;
     document.querySelector("#card1").innerHTML = CssQuestion[j];
-document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
-CssLives();
+    document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
+    CssLives();
+    if (window.location.pathname != '/style') {
+      window.location.href = '/style';
+    } else {
+      console.log('on same page');
+      CssStatus();
+    }
 
   }
+
 
   //JS Card Add, pushes input value into the end of the array
   if (document.querySelector('#pickSubject').value == 'JS' && (document.querySelector('#addQuestion').value !== "" || document.querySelector('#addQuestion').value !== "") && (document.querySelector('#addAnswer').value !== "" || document.querySelector('#addAnswer').value !== "")) {
     JsQuestion.push(document.querySelector('#addQuestion').value);
     JsAnswer.push(document.querySelector('#addAnswer').value);
     messages();
-    k = JsQuestion.length-1;
+    k = JsQuestion.length - 1;
     document.querySelector("#card1").innerHTML = JsQuestion[k];
-document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
-JsLives();
+    document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
+    JsLives();
+    if (window.location.pathname != '/js') {
+      window.location.href = '/js';
+    } else {
+      console.log('on same page');
+      JsStatus();
+    }
+
   }
 
 }
