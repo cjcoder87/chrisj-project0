@@ -6,7 +6,15 @@ html{
   cursor: pointer;
   font-size: 1.5em;
 }
-#htmllink{
+a#htmllink,a#csslink, a#jslink{
+  cursor: none;
+}
+#htmllink,#csslink, #jslink{
+  color: white;
+  text-decoration: none;
+}
+
+.active{
   background-color: #1b4473;
 }
 p#directions.btn-primary{
@@ -18,9 +26,9 @@ p#directions.btn-primary{
   font-size: .8em;
   display: none;
 }
-#cssleft, #cssright, #jsright, #jsleft{
+/* #cssleft, #cssright, #jsright, #jsleft{
   display: none;
-}
+} */
 #subjectmatterquestions, #subjectmatteranswers{
   width: 80%;
 }

@@ -3,7 +3,7 @@ var d = 0;
 function printQuestions() {
   for (d = 0; d < HtmlQuestion.length; d++) {
 
-    document.querySelector("#displayHtmlcards").innerHTML +=
+    document.querySelector("#displayhtmlcards").innerHTML +=
       '<section class="flip-container"' + '>' +
       '<section class="flipper">' +
       '<section class="front flashcard">' +

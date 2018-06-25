@@ -1,3 +1,5 @@
+{% block page %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,16 +10,20 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="css/index2.css">
+  <link rel="stylesheet" href="css/index4.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
   <title>The Devs Study Guide</title>
 </head>
 
-<body class="container-fluid">
+<body>
+
+<section class="container-fluid">
+
   <section id="filter" onclick="closeAll()"></section>
-  <header class="row jumbotron">
+  
+
+ {% block header %}
+<header class="row jumbotron">
     <nav class="row">
       <section class="col-md-12">
         <h1>The Developer's Study Guide</h1>
@@ -29,24 +35,23 @@
 
     </nav>
 
-
   </header>
+  {% endblock %}
+  {# End of Header Block #}
 
-  <main class="row">
-
+{% block main %}
+ <main class="row">
+{# put links around the list content #}
     <section id="subject" class="col-md-3">
       <h2>Subjects</h2>
       <ol id="subjects">
-        <li id="htmllink" class="active" onclick="switchHtmlSlider()">HTML</li>
-        <li id="csslink" onclick="switchCssSlider()"> CSS</li>
-        <li id="jslink" onclick="switchJsSlider()">JS</li>
+        <a id="htmllink" href="/"><li> HTML</li></a>
+        <a id="csslink" href="/style"><li> CSS</li></a>
+        <a id="jslink" href="/js"><li>JS</li></a>
       </ol>
     </section>
-    <section id="flipping" class="col-md-6">
-      <!-- 
-              <button id="handle">Fade</button> 
-              <div id="slideSource">Whatever you want here - images or text</div> -->
 
+    <section id="flipping" class="col-md-6">
       <section id="addCard">
         <p class="pull-right close" onclick="closeAll()">X</p>
         <h2>Add</h2>
@@ -60,15 +65,16 @@
             <option id="css" value="CSS">CSS</option>
             <option id="js" value="JS">JS</option>
           </select>
-          <!-- <input id="varname" type="text" value="" hidden> -->
+        
           <span id="failmessage2">Write a Question.</span>
 
           <input id="addQuestion" type="text" placeholder="Question">
           <span id="failmessage3">Write an Answer.</span>
           <input id="addAnswer" type="text" placeholder="Answer">
-          <button type="button" class="btn btn-lg btn-success" onclick="addcards();">Add</button>
+          <button type="button" class="btn btn-lg btn-success" onclick="addcards()">Add</button>
         </form>
       </section>
+
       <section id="updateCard">
         <p class="pull-right close" onclick="closeAll()">X</p>
         <h2>Update</h2>
@@ -96,9 +102,10 @@
           <button type="button" id="deleteButton" class="btn btn-lg btn-danger">Delete</button>
 
       </section>
+
       <section id="displaycards">
         <p class="pull-right close" onclick="closeAll()">X</p>
-        <!-- <h2>Cards</h2> -->
+        
         <h3 class="well">Html Questions</h3>
         <section id="displayhtmlcards">
         </section>
@@ -108,7 +115,6 @@
         </section>
 
         <h3 class="well">JS Questions</h3>
-
         <section id="displayjscards">
         </section>
 
@@ -133,9 +139,7 @@
         <h3>Show Cards</h3>
         <p>This shows you the entire deck of questions created.</p>
 
-
-
-      </section>
+     </section>
 
       <!-- Flipping Card -->
       <section class="flip-container" ontouchstart="this.classList.toggle('hover')">
@@ -154,24 +158,18 @@
         <!-- End of flipper -->
       </section>
       <!-- End of flip-container -->
-      <section id="htmlleft" class="leftHolder pull-left" onclick="leftHTML();">
+      {% block arrows %}
+      <section id="htmlleft" class="leftHolder pull-left" onclick="leftHTML()">
         <p>&lt;</p>
       </section>
-      <section id="htmlright" class="rightHolder pull-right" onclick="rightHTML();">
+      <section id="htmlright" class="rightHolder pull-right" onclick="rightHTML()">
         <p>&gt;</p>
       </section>
-      <section id="cssleft" class="leftHolder pull-left" onclick="leftCSS();">
-        <p>&lt;</p>
-      </section>
-      <section id="cssright" class="rightHolder pull-right" onclick="rightCSS();">
-        <p>&gt;</p>
-      </section>
-      <section id="jsleft" class="leftHolder pull-left" onclick="leftJS();">
-        <p>&lt;</p>
-      </section>
-      <section id="jsright" class="rightHolder pull-right" onclick="rightJS();">
-        <p>&gt;</p>
-      </section>
+      
+     
+      {% endblock %}
+
+
     </section>
     <!--End of section col -->
 
@@ -192,18 +190,12 @@
 
       </ul>
     </section>
-
-    <!-- <section class="col-md-12">
-             <ul>
-                  <li><i class="fas fa-plus">&nbsp;&nbsp;&nbsp;&nbsp;Add Card</i></li>
-                  <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Update Card</i></li>
-                  <li><i class="fas fa-trash">&nbsp;&nbsp;&nbsp;&nbsp;Delete Card</i></li>
-            
-                </ul>
-          </section> -->
-
   </main>
 
+ {% endblock %} 
+{# End of block main #}
+
+{% block footer %}
   <footer class="row">
     <section class="col-md-6">
       <h3>Social Media</h3>
@@ -243,11 +235,21 @@
       </a>
 
     </section>
+ 
+
+  
 
 
-
+</section>
   </footer>
+ 
+{% endblock %}
+{# End of block footer#}
+  
+
+  {% block scripts %}
   <script src="script/create.js"></script>
+  <script src="script/lives.js"></script>
   <script src="script/print.js"></script>
   <script src="script/add.js"></script>
   <script src="script/closeShow.js"></script>
@@ -255,15 +257,8 @@
   <script src="script/update.js"></script>
   <script src="script/delete.js"></script>
   <script src="script/switch.js"></script>
-
-
-
-
-
-
-
-
-
+ {% endblock %}
 </body>
 
 </html>
+{% endblock %}

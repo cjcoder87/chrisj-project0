@@ -86,71 +86,69 @@ function leftJS() {
 }
 
 //Switches Sliders
-function switchHtmlSlider() {
-  document.querySelector('#htmlleft').style.display = 'block';
-  document.querySelector('#htmlright').style.display = 'block';
-  document.querySelector('#cssleft').style.display = 'none';
-  document.querySelector('#cssright').style.display = 'none';
-  document.querySelector('#jsleft').style.display = 'none';
-  document.querySelector('#jsright').style.display = 'none';
-  document.querySelector('#card1').style.display = 'none';
-  document.querySelector('.flashcard2 p').style.display = 'none';
+// function switchHtmlSlider() {
+//   document.querySelector('#htmlleft').style.display = 'block';
+//   document.querySelector('#htmlright').style.display = 'block';
+//   document.querySelector('#cssleft').style.display = 'none';
+//   document.querySelector('#cssright').style.display = 'none';
+//   document.querySelector('#jsleft').style.display = 'none';
+//   document.querySelector('#jsright').style.display = 'none';
+//   document.querySelector('#card1').style.display = 'none';
+//   document.querySelector('.flashcard2 p').style.display = 'none';
 
-  document.querySelector("#card1").innerHTML = HtmlQuestion[0];
-  document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[0];
-  i = 0;
+//   document.querySelector("#card1").innerHTML = HtmlQuestion[i];
+//   document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
+  
 
-  document.querySelector('#htmllink').style.backgroundColor = '#1b4473';
-  document.querySelector('#htmllink').classList.add("active");
-  document.querySelector('#csslink').classList.remove("active");
-  document.querySelector('#jslink').classList.remove("active");
+//   document.querySelector('#htmllink').style.backgroundColor = '#1b4473';
+//   document.querySelector('#htmllink').classList.add("active");
+//   document.querySelector('#csslink').classList.remove("active");
+//   document.querySelector('#jslink').classList.remove("active");
 
-  document.querySelector('#csslink').style.backgroundColor = 'initial';
-  document.querySelector('#jslink').style.backgroundColor = 'initial';
+//   document.querySelector('#csslink').style.backgroundColor = 'initial';
+//   document.querySelector('#jslink').style.backgroundColor = 'initial';
 
+// }
 
+// function switchCssSlider() {
+//   document.querySelector('#htmlleft').style.display = 'none';
+//   document.querySelector('#htmlright').style.display = 'none';
+//   document.querySelector('#cssleft').style.display = 'block';
+//   document.querySelector('#cssright').style.display = 'block';
+//   document.querySelector('#jsleft').style.display = 'none';
+//   document.querySelector('#jsright').style.display = 'none';
+//   document.querySelector('#card1').style.display = 'none';
+//   document.querySelector('.flashcard2 p').style.display = 'none';
 
+//   document.querySelector("#card1").innerHTML = CssQuestion[0];
+//   document.querySelector('.flashcard2 p').innerHTML = CssAnswer[0];
+//   j = 0;
 
-}
-function switchCssSlider() {
-  document.querySelector('#htmlleft').style.display = 'none';
-  document.querySelector('#htmlright').style.display = 'none';
-  document.querySelector('#cssleft').style.display = 'block';
-  document.querySelector('#cssright').style.display = 'block';
-  document.querySelector('#jsleft').style.display = 'none';
-  document.querySelector('#jsright').style.display = 'none';
-  document.querySelector('#card1').style.display = 'none';
-  document.querySelector('.flashcard2 p').style.display = 'none';
+//   document.querySelector('#htmllink').style.backgroundColor = 'initial';
+//   document.querySelector('#csslink').style.backgroundColor = '#1b4473';
+//   document.querySelector('#htmllink').classList.remove("active");
+//   document.querySelector('#csslink').classList.add("active");
+//   document.querySelector('#jslink').classList.remove("active");
+//   document.querySelector('#jslink').style.backgroundColor = 'initial';
+// }
+// function switchJsSlider() {
+//   document.querySelector('#htmlleft').style.display = 'none';
+//   document.querySelector('#htmlright').style.display = 'none';
+//   document.querySelector('#cssleft').style.display = 'none';
+//   document.querySelector('#cssright').style.display = 'none';
+//   document.querySelector('#jsleft').style.display = 'block';
+//   document.querySelector('#jsright').style.display = 'block';
+//   document.querySelector('#card1').style.display = 'none';
+//   document.querySelector('.flashcard2 p').style.display = 'none';
 
-  document.querySelector("#card1").innerHTML = CssQuestion[0];
-  document.querySelector('.flashcard2 p').innerHTML = CssAnswer[0];
-  j = 0;
+//   document.querySelector("#card1").innerHTML = JsQuestion[0];
+//   document.querySelector('.flashcard2 p').innerHTML = JsAnswer[0];
+//   k = 0;
 
-  document.querySelector('#htmllink').style.backgroundColor = 'initial';
-  document.querySelector('#csslink').style.backgroundColor = '#1b4473';
-  document.querySelector('#htmllink').classList.remove("active");
-  document.querySelector('#csslink').classList.add("active");
-  document.querySelector('#jslink').classList.remove("active");
-  document.querySelector('#jslink').style.backgroundColor = 'initial';
-}
-function switchJsSlider() {
-  document.querySelector('#htmlleft').style.display = 'none';
-  document.querySelector('#htmlright').style.display = 'none';
-  document.querySelector('#cssleft').style.display = 'none';
-  document.querySelector('#cssright').style.display = 'none';
-  document.querySelector('#jsleft').style.display = 'block';
-  document.querySelector('#jsright').style.display = 'block';
-  document.querySelector('#card1').style.display = 'none';
-  document.querySelector('.flashcard2 p').style.display = 'none';
-
-  document.querySelector("#card1").innerHTML = JsQuestion[0];
-  document.querySelector('.flashcard2 p').innerHTML = JsAnswer[0];
-  k = 0;
-
-  document.querySelector('#htmllink').style.backgroundColor = 'initial';
-  document.querySelector('#csslink').style.backgroundColor = 'initial';
-  document.querySelector('#jslink').style.backgroundColor = '#1b4473';
-  document.querySelector('#htmllink').classList.remove("active");
-  document.querySelector('#csslink').classList.remove("active");
-  document.querySelector('#jslink').classList.add("active");
-}
+//   document.querySelector('#htmllink').style.backgroundColor = 'initial';
+//   document.querySelector('#csslink').style.backgroundColor = 'initial';
+//   document.querySelector('#jslink').style.backgroundColor = '#1b4473';
+//   document.querySelector('#htmllink').classList.remove("active");
+//   document.querySelector('#csslink').classList.remove("active");
+//   document.querySelector('#jslink').classList.add("active");
+// }

@@ -1,0 +1,25 @@
+{% extends 'index.njk' %}
+ 
+ {% block arrows %}
+ <section id="cssleft" class="leftHolder pull-left" onclick="leftCSS()">
+        <p>&lt;</p>
+      </section>
+      <section id="cssright" class="rightHolder pull-right" onclick="rightCSS()">
+        <p>&gt;</p>
+      </section>
+  {% endblock %}
+
+
+  {% block scripts %}
+  <script src="script/createcss.js"></script>
+  <script src="script/lives.js"></script>
+
+  <script src="script/print.js"></script>
+  <script src="script/add.js"></script>
+  <script src="script/closeShow.js"></script>
+  <script src="script/transitionfade.js"></script>
+  <script src="script/update.js"></script>
+  <script src="script/delete.js"></script>
+  <script src="script/switch.js"></script>
+
+ {% endblock %}

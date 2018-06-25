@@ -39,7 +39,16 @@ function addcards() {
     HtmlQuestion.push(document.querySelector('#addQuestion').value);
     HtmlAnswer.push(document.querySelector('#addAnswer').value);
     messages();
-  
+    i = HtmlQuestion.length-1;
+    document.querySelector("#card1").innerHTML = HtmlQuestion[i];
+document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
+
+htmlLives();
+
+//...
+//  console.log(JSON.parse(localStorage.getItem("hquestions"))); 
+
+
   }
 
   //CSS Card Add, pushes input value into the end of the array
@@ -47,6 +56,11 @@ function addcards() {
     CssQuestion.push(document.querySelector('#addQuestion').value);
     CssAnswer.push(document.querySelector('#addAnswer').value);
     messages();
+    j = CssQuestion.length-1;
+    document.querySelector("#card1").innerHTML = CssQuestion[j];
+document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
+CssLives();
+
   }
 
   //JS Card Add, pushes input value into the end of the array
@@ -54,6 +68,10 @@ function addcards() {
     JsQuestion.push(document.querySelector('#addQuestion').value);
     JsAnswer.push(document.querySelector('#addAnswer').value);
     messages();
+    k = JsQuestion.length-1;
+    document.querySelector("#card1").innerHTML = JsQuestion[k];
+document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
+JsLives();
   }
 
 }

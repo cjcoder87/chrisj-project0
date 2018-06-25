@@ -18,7 +18,6 @@ pull value from object currently being viewed
 destroy object with button
 reset form
 
-
 left slide
 decrement the assigned variable
 display the object on the note card

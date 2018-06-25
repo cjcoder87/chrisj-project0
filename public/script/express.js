@@ -4,9 +4,11 @@ const path = require('path');
 // const fs = require('fs');
 
 const app = express(); //
-var bodyParser = require('body-parser');
+// var bodyParser = require('body-parser');
 
-// app.use(express.static('public'));
+app.use(express.static('public'));
+// app.use(express.static('views'));
+
 
 // app.get('/', (req, res) => {
 //   res.sendFile(path.join(__dirname + '/../index.html'));
@@ -34,30 +36,40 @@ var bodyParser = require('body-parser');
 // app.get(/[0-9]/, () => {});
 // app.get(/[a-z0-9]/, () => {});
 
-nunjucks.configure('public', {
-
+nunjucks.configure('views', {
 autoescape:true,
 express:app
-
 });
 
-app.use(bodyParser.json());
-app.use(urlencoded({
-extended:false
-}));
+// app.use(bodyParser.json());
+// app.use(urlencoded({
+// extended:false
+// }));
 
-app.set('view engine', 'nunjucks');
+app.set('view engine', 'njk');
 
-app.route('/contact')
-.get((req, res) =>{
-res.render('contact');
-})
-.post((req, res) =>{
-  console.log(req.body);
-  res.end();
+// app.route('/index')
+// .get((req, res) =>{
+// res.render('index');
+// })
+// .post((req, res) =>{
+//   console.log(req.body);
+//   res.end();
+// });
+app.get( '/', function( req, res ) {
+  res.render( 'index.njk');
 });
 
-app.get('/:banana', (req,res)=>{
-res.render('boilerplate',{minion:req.params.banana});
+app.get('/style', function (req, res) {
+  res.render('css.njk')
 });
-app.listen(5050);
+
+app.get('/js', function (req, res) {
+  res.render('js.njk')
+});
+// app.get('/', (req,res)=>{
+// // res.render('js');
+// res.render('index');
+// // res.render('css');
+// });
+app.listen(9000);

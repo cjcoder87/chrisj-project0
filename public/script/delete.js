@@ -1,19 +1,19 @@
 $(document).ready(function () {
   //Checks which subject is the active class and places value from array into the input field
   $("#trash").click(function () {
-    if ($("#htmllink").hasClass("active")) {
+    if ($("#htmllink li").hasClass("active")) {
       document.querySelector('#deleteQuestion').value = HtmlQuestion[i];
       document.querySelector('#deleteAnswer').value = HtmlAnswer[i];
       console.log('delete html');
     }
 
-    if ($("#csslink").hasClass("active")) {
+    if ($("#csslink li").hasClass("active")) {
       document.querySelector('#deleteQuestion').value = CssQuestion[j];
       document.querySelector('#deleteAnswer').value = CssAnswer[j];
       console.log('delete css');
     }
 
-    if ($("#jslink").hasClass("active")) {
+    if ($("#jslink li").hasClass("active")) {
       document.querySelector('#deleteQuestion').value = JsQuestion[k];
       document.querySelector('#deleteAnswer').value = JsAnswer[k];
       console.log('js html');
@@ -31,7 +31,7 @@ $(document).ready(function () {
     var index6 = CssAnswer.indexOf(k);
 
 //Checks element that has actie class
-    if ($("#htmllink").hasClass("active")) {
+    if ($("#htmllink li").hasClass("active")) {
       //Preventitive Condition for deleting the default card
 
       if (i <= 0) {
@@ -51,33 +51,35 @@ $(document).ready(function () {
         i--;
         document.querySelector('#card1').innerHTML = HtmlQuestion[i];
         document.querySelector('.flashcard2 p').innerHTML = HtmlAnswer[i];
+        htmlLives();
         console.log('HTML delete accomplished');
 
       }
 
     }
 
-    if ($("#csslink").hasClass("active")) {
+    if ($("#csslink li").hasClass("active")) {
       if (j <= 0) {
         document.querySelector('#deleteSpan').innerHTML = "You can't delete the last CSS index Card";
         document.querySelector('#deleteSpan').style.display = "block";
       } else {
-        CSSQuestion.splice(index3, 1);
-        CSSAnswer.splice(index4, 1);
+        CssQuestion.splice(index3, 1);
+        CssAnswer.splice(index4, 1);
         document.querySelector('#deleteSpan').innerHTML = "Succesfully Deleted";
         document.querySelector('#deleteSpan').style.display = "block";
 
         document.querySelector('#deleteQuestion').value = "";
         document.querySelector('#deleteAnswer').value = "";
         j--;
-        document.querySelector('#card1').innerHTML = CSSQuestion[j];
-        document.querySelector('.flashcard2 p').innerHTML = CSSAnswer[j];
+        document.querySelector('#card1').innerHTML = CssQuestion[j];
+        document.querySelector('.flashcard2 p').innerHTML = CssAnswer[j];
+       CssLives();
         console.log('Css delete accomplished');
 
       }
     }
 
-    if ($("#jslink").hasClass("active")) {
+    if ($("#jslink li").hasClass("active")) {
       if (k <= 0) {
         document.querySelector('#deleteSpan').innerHTML = "You can't delete the last JS index Card";
         document.querySelector('#deleteSpan').style.display = "block";
@@ -92,6 +94,7 @@ $(document).ready(function () {
         k--;
         document.querySelector('#card1').innerHTML = JsQuestion[k];
         document.querySelector('.flashcard2 p').innerHTML = JsAnswer[k];
+        JsLives();
         console.log('JS delete accomplished');
       }
 
