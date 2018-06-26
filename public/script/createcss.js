@@ -22,6 +22,10 @@ if (JSON.parse(localStorage.getItem("canswers")) != null) {
   console.log('Do Nothing');
 }
 
+//Converts array into an object for Mondo DB
+var CssQuestionObj = Object.assign({}, CssQuestion);
+var CssAnswerObj = Object.assign({}, CssAnswer);
+
 function CssStatus() {
   document.querySelector("#cardstatus").innerHTML = 'CSS CARD ' + (j + 1) + ' of' + " " + CssQuestion.length;
 

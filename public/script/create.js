@@ -21,6 +21,11 @@ if(JSON.parse(localStorage.getItem("hanswers")) != null){
 }else{
   console.log('Do Nothing');
 }
+//Converts array into an object for Mondo DB
+var HtmlQuestionObj = Object.assign({}, HtmlQuestion);
+var HtmlAnswerObj = Object.assign({}, HtmlAnswer);
+
+
 function htmlStatus(){
   document.querySelector("#cardstatus").innerHTML = 'HTML CARD ' + (i+1) + ' of' + " " + HtmlQuestion.length;
 }
