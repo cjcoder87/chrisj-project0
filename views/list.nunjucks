@@ -1,0 +1,7 @@
+for item in data.contacts
+
+<li>
+item.firstName
+item.lastName
+item.telephone
+</li>

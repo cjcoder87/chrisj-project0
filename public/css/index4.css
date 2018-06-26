@@ -1,6 +1,9 @@
 html {
   font-size: 16px;
 }
+#submit, label input, textarea{
+  color:black;
+}
 
 .close {
   cursor: pointer;

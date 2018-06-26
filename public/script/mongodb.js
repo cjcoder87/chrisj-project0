@@ -18,8 +18,7 @@ people.insertOne({
 
 
 }).then(() =>{
-  people.find({"firstName":"chris1"}).toArray().then((data)=>{
-    //.toArray(); for multiple
+  people.find({"firstName":"chris1"}).then((data)=>{
     //{} gives the whole collection
     console.log(data);
 
@@ -33,5 +32,5 @@ people.insertOne({
 //find - will search all
 //insertOne
 //updateOne
-//deleteOne db.inventory.deleteMany({})
+//deleteOne
 //findOne
